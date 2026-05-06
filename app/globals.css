@@ -1,0 +1,342 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────
+   GoldKach Brand Colours (from logo)
+   Dark Blue  : #2D2B6B
+   Sky Blue   : #1E9BF0
+   White      : #FFFFFF
+───────────────────────────────────────────── */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 241 42% 29%;            /* dark-blue text on white bg */
+
+    --card: 0 0% 100%;
+    --card-foreground: 241 42% 29%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 241 42% 29%;
+
+    --primary: 241 42% 29%;               /* #2D2B6B */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 207 90% 96%;             /* light sky-blue tint */
+    --secondary-foreground: 241 42% 29%;
+
+    --muted: 220 20% 92%;
+    --muted-foreground: 220 15% 40%;
+
+    --accent: 207 87% 52%;                /* #1E9BF0 sky blue */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 207 87% 52%;               /* sky blue #1E9BF0 */
+    --input: 207 87% 52%;
+    --ring: 207 87% 52%;
+
+    --radius: 0.3rem;
+
+    --chart-1: 207 87% 52%;
+    --chart-2: 241 42% 29%;
+    --chart-3: 207 87% 70%;
+    --chart-4: 241 42% 50%;
+    --chart-5: 207 87% 35%;
+  }
+
+  .dark {
+    --background: 241 42% 12%;
+    --foreground: 0 0% 100%;
+    --card: 241 42% 16%;
+    --card-foreground: 0 0% 100%;
+    --popover: 241 42% 16%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 241 42% 29%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 241 42% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 241 30% 20%;
+    --muted-foreground: 220 20% 65%;
+    --accent: 207 87% 52%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 241 30% 26%;
+    --input: 241 30% 26%;
+    --ring: 207 87% 52%;
+    --chart-1: 207 87% 52%;
+    --chart-2: 241 42% 50%;
+    --chart-3: 207 87% 70%;
+    --chart-4: 241 42% 70%;
+    --chart-5: 207 87% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-poppins, "Poppins", Arial, Helvetica, sans-serif);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-poppins, "Poppins", Arial, Helvetica, sans-serif);
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Landing-page utility classes
+───────────────────────────────────────────── */
+@layer components {
+
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-sm text-sm font-semibold
+           transition-all duration-200 hover:opacity-90 active:scale-95;
+    background-color: #1E9BF0;
+    color: #ffffff;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-sm text-sm font-semibold
+           border transition-all duration-200;
+    border-color: rgba(255,255,255,0.40);
+    color: #ffffff;
+  }
+  .btn-outline:hover {
+    background-color: rgba(255,255,255,0.10);
+  }
+
+  /* ── Section label ── */
+  .section-label {
+    @apply block text-xs font-semibold uppercase tracking-widest mb-3;
+    color: #1E9BF0;
+  }
+
+  /* ── Service cards (dark-blue bg, white text) ── */
+  .service-card {
+    @apply p-8 rounded-sm border transition-all duration-300;
+    background-color: #2D2B6B;
+    border-color: rgba(30,155,240,0.18);
+    color: #ffffff;
+  }
+  .service-card:hover {
+    border-color: rgba(30,155,240,0.50);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(30,155,240,0.15);
+  }
+
+  /* ── Glass card (hero floating badges) ── */
+  .glass-card {
+    background: rgba(45,43,107,0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(30,155,240,0.30);
+    color: #ffffff;
+  }
+
+  /* ── Gradient text ── */
+  .text-gradient-sky {
+    background: linear-gradient(135deg, #1E9BF0 0%, #7dd3fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Stat number — dark blue on white bg ── */
+  .stat-number {
+    @apply text-4xl font-extrabold;
+    color: #2D2B6B;
+  }
+
+  /* ── Noise overlay ── */
+  .noise-overlay {
+    @apply fixed inset-0 pointer-events-none z-[999] opacity-[0.02];
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+
+  /* ── Hero image overlay — strong left-side gradient so text is always readable ── */
+  .hero-overlay {
+    background: linear-gradient(
+      105deg,
+      rgba(45,43,107,0.92) 0%,
+      rgba(45,43,107,0.78) 35%,
+      rgba(45,43,107,0.45) 60%,
+      rgba(45,43,107,0.10) 100%
+    );
+  }
+
+  /* ── Bottom fade on hero ── */
+  .hero-overlay-bottom {
+    background: linear-gradient(
+      to top,
+      rgba(45,43,107,0.85) 0%,
+      rgba(45,43,107,0.30) 40%,
+      transparent 100%
+    );
+  }
+
+  /* ── Section with white bg — text must be dark blue ── */
+  .section-white {
+    @apply bg-white;
+    color: #2D2B6B;
+  }
+  .section-white h1,
+  .section-white h2,
+  .section-white h3,
+  .section-white h4 {
+    color: #2D2B6B;
+  }
+  .section-white p {
+    color: rgba(45,43,107,0.70);
+  }
+
+  /* ── Alternate section (very light blue tint) ── */
+  .section-alt {
+    background-color: #F0F5FF;
+    color: #2D2B6B;
+  }
+  .section-alt h1,
+  .section-alt h2,
+  .section-alt h3,
+  .section-alt h4 {
+    color: #2D2B6B;
+  }
+  .section-alt p {
+    color: rgba(45,43,107,0.65);
+  }
+
+  /* ── Scroll-bar animation ── */
+  .animate-scroll-bar {
+    animation: scrollBar 2s ease-in-out infinite;
+  }
+  @keyframes scrollBar {
+    0%   { transform: translateY(-100%); }
+    100% { transform: translateY(200%); }
+  }
+
+  /* ── Float animation ── */
+  .animate-float-slow {
+    animation: floatSlow 4s ease-in-out infinite;
+  }
+  @keyframes floatSlow {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+  }
+
+  /* ── Reveal animations ── */
+
+  /* Fade up (default) */
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 0.70s cubic-bezier(0.22,1,0.36,1),
+                transform 0.70s cubic-bezier(0.22,1,0.36,1);
+  }
+  .reveal-up.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Slide from left */
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.70s cubic-bezier(0.22,1,0.36,1),
+                transform 0.70s cubic-bezier(0.22,1,0.36,1);
+  }
+  .reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Slide from right */
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.70s cubic-bezier(0.22,1,0.36,1),
+                transform 0.70s cubic-bezier(0.22,1,0.36,1);
+  }
+  .reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Scale up */
+  .reveal-scale {
+    opacity: 0;
+    transform: scale(0.88);
+    transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1),
+                transform 0.65s cubic-bezier(0.22,1,0.36,1);
+  }
+  .reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Pure fade */
+  .reveal-fade {
+    opacity: 0;
+    transition: opacity 0.80s ease;
+  }
+  .reveal-fade.active {
+    opacity: 1;
+  }
+
+  /* Stagger delays — up to 8 items */
+  .stagger-1 { transition-delay: 0.05s; }
+  .stagger-2 { transition-delay: 0.13s; }
+  .stagger-3 { transition-delay: 0.21s; }
+  .stagger-4 { transition-delay: 0.29s; }
+  .stagger-5 { transition-delay: 0.37s; }
+  .stagger-6 { transition-delay: 0.45s; }
+  .stagger-7 { transition-delay: 0.53s; }
+  .stagger-8 { transition-delay: 0.61s; }
+}
+
+/* ─────────────────────────────────────────────
+   Loader
+───────────────────────────────────────────── */
+.loader {
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  transform: rotate(165deg);
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 0.25em;
+  transform: translate(-50%, -50%);
+}
+.loader:before { animation: before8 2s infinite; }
+.loader:after  { animation: after6  2s infinite; }
+
+@keyframes before8 {
+  0%   { width: 0.5em; box-shadow: 1em -0.5em rgba(30,155,240,.75), -1em 0.5em rgba(45,43,107,.75); }
+  35%  { width: 2.5em; box-shadow: 0 -0.5em rgba(30,155,240,.75), 0 0.5em rgba(45,43,107,.75); }
+  70%  { width: 0.5em; box-shadow: -1em -0.5em rgba(30,155,240,.75), 1em 0.5em rgba(45,43,107,.75); }
+  100% { box-shadow: 1em -0.5em rgba(30,155,240,.75), -1em 0.5em rgba(45,43,107,.75); }
+}
+@keyframes after6 {
+  0%   { height: 0.5em; box-shadow: 0.5em 1em rgba(45,43,107,.75), -0.5em -1em rgba(30,155,240,.75); }
+  35%  { height: 2.5em; box-shadow: 0.5em 0 rgba(45,43,107,.75), -0.5em 0 rgba(30,155,240,.75); }
+  70%  { height: 0.5em; box-shadow: 0.5em -1em rgba(45,43,107,.75), -0.5em 1em rgba(30,155,240,.75); }
+  100% { box-shadow: 0.5em 1em rgba(45,43,107,.75), -0.5em -1em rgba(30,155,240,.75); }
+}
+.loader {
+  position: absolute;
+  top: calc(50% - 1.25em);
+  left: calc(50% - 1.25em);
+}
