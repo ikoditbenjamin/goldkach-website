@@ -4,10 +4,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const stats = [
-  { value: 4,  suffix: '+',  label: 'Years of Experience' },
-  { value: 10, suffix: 'k+', label: 'Successful Investments' },
+  { value: 8,  suffix: '+',  label: 'Years of Experience' },
+  { value: 500, suffix: '+', label: 'Successful Investments' },
   { value: 7,  suffix: 'B',  prefix: '$', label: 'Dollar Money Profit' },
-  { value: 3,  suffix: '+',  label: 'Expert Advisors' },
+  { value: 10,  suffix: '+',  label: 'Expert Advisors' },
 ];
 
 function useCountUp(target: number, active: boolean, duration = 1500) {

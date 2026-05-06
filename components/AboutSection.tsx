@@ -7,12 +7,22 @@ import Link from 'next/link';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const capabilities = [
-  { icon: 'AcademicCapIcon' as const,    title: 'College Savings',      description: 'Education funding strategies and 529 plan optimization.' },
-  { icon: 'BanknotesIcon' as const,      title: 'Wealth Management',    description: 'Below purchase functioning for high-net-worth individuals.' },
-  { icon: 'ChartBarSquareIcon' as const, title: 'Stocks Management',    description: 'From highest stock profits tailored equity strategies.' },
-  { icon: 'ShieldCheckIcon' as const,    title: 'Income Insurance',     description: 'Below purchase functioning to protect your income stream.' },
+  { icon: 'AcademicCapIcon' as const,    
+    title: 'College Savings',      
+    description: 'Helping families build and grow college savings through smart investment strategies.' },
+  { icon: 'BanknotesIcon' as const,      
+    title: 'Wealth Management',    
+    description: 'Seamless execution of high-value investments across private markets, equities, and alternative assets for high-net-worth clients.' },
+  { icon: 'ChartBarSquareIcon' as const, 
+    title: 'Stocks Management',    
+    description: 'From highest stock profits tailored equity strategies.' },
+  { icon: 'ShieldCheckIcon' as const,    
+    title: 'Income Protection',     
+    description: 'Strategies to safeguard and stabilize your income stream against financial disruptions.' },
   { icon: 'LightBulbIcon' as const,      title: 'Investment Advice',    description: 'Buying and selling financial instruments on your behalf.' },
-  { icon: 'DocumentTextIcon' as const,   title: 'Industrial Contracts', description: 'Buying and selling financial instruments and agreements.' },
+  { icon: 'DocumentTextIcon' as const,   
+    title: 'Industrial Contracts', 
+    description: 'Buying and selling financial instruments and agreements.' },
 ];
 
 export default function AboutSection() {

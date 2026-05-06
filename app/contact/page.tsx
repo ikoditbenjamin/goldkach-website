@@ -161,7 +161,7 @@ export default function ContactPage() {
             <div>
               <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: '#2D2B6B' }}>Address</p>
               <p className="text-sm font-semibold" style={{ color: '#2D2B6B' }}>
-                Kanjokya House, Plot 90<br />
+                Kanjokya Street-Kanjokya House, Plot 90<br />
                 Kampala, Uganda
               </p>
             </div>

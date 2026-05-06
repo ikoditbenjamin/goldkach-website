@@ -13,9 +13,57 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Goldkach - Community Platform",
+  metadataBase: new URL("https://www.goldkach.co.ug"),
+  title: {
+    default: "GoldKach Limited — Global Investment Management",
+    template: "%s | GoldKach Limited",
+  },
   description:
-    "A comprehensive community platform for Kanywani Byaruhanga featuring blogs, services, and member engagement.",
+    "GoldKach Limited provides personalized investment strategies, wealth management, and global market access for individuals, institutions, and corporations across Africa and beyond.",
+  keywords: [
+    "investment management Uganda",
+    "wealth management Africa",
+    "ETF Africa",
+    "global investment Kampala",
+    "GoldKach",
+    "managed accounts Uganda",
+    "financial advisory Uganda",
+    "frontier markets investment",
+  ],
+  authors: [{ name: "GoldKach Limited", url: "https://www.goldkach.co.ug" }],
+  creator: "GoldKach Limited",
+  openGraph: {
+    type: "website",
+    locale: "en_UG",
+    url: "https://www.goldkach.co.ug",
+    siteName: "GoldKach Limited",
+    title: "GoldKach Limited — Global Investment Management",
+    description:
+      "Personalized financial strategies for individuals and corporations — building wealth, securing futures, and expanding horizons across global markets.",
+    images: [
+      {
+        url: "/LOGO.png",
+        width: 1200,
+        height: 630,
+        alt: "GoldKach Limited — Global Investment Management",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GoldKach Limited — Global Investment Management",
+    description:
+      "Personalized financial strategies for individuals and corporations — building wealth, securing futures, and expanding horizons across global markets.",
+    images: ["/LOGO.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

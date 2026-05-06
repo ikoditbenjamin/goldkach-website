@@ -107,7 +107,7 @@ export default function ServicesSection() {
               <div
                 key={service.label}
                 ref={(el) => { cardRefs.current[i] = el; }}
-                className={`service-card reveal-up stagger-${i + 1}`}
+                className={`service-card rounded-lg reveal-up stagger-${i + 1}`}
               >
                 {/* Icon + tagline row */}
                 <div className="flex items-start justify-between mb-5">

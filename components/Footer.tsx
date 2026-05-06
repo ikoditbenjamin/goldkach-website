@@ -60,7 +60,9 @@ export default function Footer() {
               style={{ border: "1px solid rgba(255,255,255,0.20)" }}
             >
               <Icon name="PhoneIcon" size={16} variant="outline" className="text-[#1E9BF0]" />
-              <span className="text-sm font-semibold">+256 200 903 314</span>
+              <span className="text-sm font-semibold">+256393246074
+
+              </span>
             </a>
           </div>
         </div>

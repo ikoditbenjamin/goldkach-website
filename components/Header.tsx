@@ -83,7 +83,7 @@ export default function Header() {
               </div>
               <div>
                 <p className="text-[10px] uppercase tracking-wider" style={{ color: "rgba(45,43,107,0.45)" }}>Phone Number</p>
-                <p className="text-sm font-bold" style={{ color: "#2D2B6B" }}>+256 200 903 314</p>
+                <p className="text-sm font-bold" style={{ color: "#2D2B6B" }}>+256393246074</p>
               </div>
             </div>
 

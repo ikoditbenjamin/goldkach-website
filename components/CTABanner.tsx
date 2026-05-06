@@ -39,11 +39,11 @@ export default function CTABanner() {
               Request Consultation
             </a>
             <a
-              href="tel:+18005551234"
+              href="tel:+256393246074"
               className="flex items-center gap-3 px-6 py-3 border border-white/20 rounded-sm text-white hover:bg-white/5 transition-colors duration-200"
             >
               <Icon name="PhoneIcon" size={16} variant="solid" className="text-accent" />
-              <span className="text-sm font-600">+1 (800) 533 449</span>
+              <span className="text-sm font-600">+256393246074</span>
             </a>
           </div>
         </div>

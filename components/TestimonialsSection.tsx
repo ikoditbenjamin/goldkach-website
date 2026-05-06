@@ -77,7 +77,7 @@ export default function TestimonialsSection() {
             What Our Customers Say
           </h2>
           <p className="text-sm mt-3" style={{ color: "#1E9BF0" }}>
-            We have over 10,000 happy customers in mind.
+            We have over 5,000+ happy customers in mind.
           </p>
         </div>
 

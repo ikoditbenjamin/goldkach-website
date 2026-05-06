@@ -249,7 +249,7 @@ export default function InsightsPage() {
               </Link>
             </div>
             <div className="flex-shrink-0 hidden md:block">
-              <div className="w-64 h-64 rounded-full overflow-hidden" style={{ backgroundColor: '#f0f4ff' }}>
+              <div className="w-64 h-64 rounded-full overflow-hidden animate-float-slow" style={{ backgroundColor: '#f0f4ff' }}>
                 <img
                   src="https://img.rocket.new/generatedImages/rocket_gen_img_11ad01153-1767916622593.png"
                   alt="GoldKach financial advisor ready to help with your investment journey"
@@ -271,8 +271,27 @@ export default function InsightsPage() {
 function ArticleCard({ article, featured }: {article: Article;featured?: boolean;}) {
   return (
     <div
-      className="rounded-lg overflow-hidden flex flex-col h-full cursor-pointer hover:shadow-lg transition-shadow duration-200"
-      style={{ backgroundColor: featured ? '#2D2B6B' : '#ffffff', border: featured ? 'none' : '1px solid #e5e7eb' }}>
+      className="rounded-lg overflow-hidden flex flex-col h-full cursor-pointer transition-all duration-300"
+      style={{
+        backgroundColor: featured ? '#2D2B6B' : '#ffffff',
+        border: featured ? 'none' : '1px solid #e5e7eb',
+        boxShadow: featured
+          ? '0 10px 30px rgba(45,43,107,0.40), 0 4px 10px rgba(0,0,0,0.20)'
+          : '0 8px 24px rgba(45,43,107,0.12), 0 2px 6px rgba(0,0,0,0.08)',
+      }}
+      onMouseEnter={(e) => {
+        (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-6px)';
+        (e.currentTarget as HTMLDivElement).style.boxShadow = featured
+          ? '0 20px 50px rgba(45,43,107,0.55), 0 8px 20px rgba(0,0,0,0.25)'
+          : '0 16px 40px rgba(45,43,107,0.20), 0 4px 12px rgba(0,0,0,0.12)';
+      }}
+      onMouseLeave={(e) => {
+        (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
+        (e.currentTarget as HTMLDivElement).style.boxShadow = featured
+          ? '0 10px 30px rgba(45,43,107,0.40), 0 4px 10px rgba(0,0,0,0.20)'
+          : '0 8px 24px rgba(45,43,107,0.12), 0 2px 6px rgba(0,0,0,0.08)';
+      }}
+    >
       
       <div className="relative h-40 overflow-hidden">
         <img

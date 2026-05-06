@@ -57,7 +57,7 @@ export default function BlogSection() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
           <div>
-            <span className="section-label reveal-fade">Insights</span>
+            <span className="section-label reveal-fade">Insi</span>
             <h2 className="font-bold text-3xl md:text-5xl leading-tight tracking-tight reveal-up stagger-1" style={{ color: "#2D2B6B" }}>
               From the Blog
             </h2>
