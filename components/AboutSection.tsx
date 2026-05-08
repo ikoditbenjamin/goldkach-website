@@ -97,10 +97,15 @@ export default function AboutSection() {
               ))}
             </div>
 
-            <Link href="#contact" className="btn-primary mt-8 self-start reveal-up stagger-4">
-              Learn More
+            <a
+              href="https://goldkach.co.ug/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary mt-8 self-start reveal-up stagger-4"
+            >
+              Start Investing
               <Icon name="ArrowRightIcon" size={16} variant="outline" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

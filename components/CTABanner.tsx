@@ -35,8 +35,17 @@ export default function CTABanner() {
 
           {/* Actions */}
           <div className="flex flex-wrap items-center gap-4 reveal-up stagger-2">
-            <a href="#contact" className="btn-primary">
+            <a href="/contact" className="btn-primary">
               Request Consultation
+            </a>
+            <a
+              href="https://goldkach.co.ug/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-6 py-3 rounded-sm text-sm font-bold transition-all duration-200 hover:opacity-90"
+              style={{ backgroundColor: '#1E9BF0', color: '#ffffff' }}
+            >
+              Invest Today
             </a>
             <a
               href="tel:+256393246074"

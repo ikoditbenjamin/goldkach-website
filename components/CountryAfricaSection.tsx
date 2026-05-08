@@ -28,14 +28,16 @@ export default function CountryAfricaSection() {
             <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(45,43,107,0.65)' }}>
               Through our platform, African investors can access ETFs, equities, bonds, and alternative assets from global markets — all managed by experienced professionals who understand both local and international financial landscapes.
             </p>
-            <Link
-              href="/products"
+            <a
+              href="https://goldkach.co.ug/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm text-sm font-bold transition-all duration-200 hover:opacity-90"
               style={{ backgroundColor: '#1E9BF0', color: '#ffffff' }}
             >
-              Explore Products
+              Start Investing
               <Icon name="ArrowRightIcon" size={14} variant="outline" />
-            </Link>
+            </a>
           </div>
 
           {/* Right — trading floor image */}

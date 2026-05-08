@@ -157,7 +157,7 @@ export default function HeroSection() {
               Free Consultation
               <Icon name="ArrowRightIcon" size={16} variant="outline" />
             </a>
-            <a href="#services" className="btn-outline">
+            <a href="https://goldkach.co.ug/" target="_blank" rel="noopener noreferrer" className="btn-outline">
               Invest Now
             </a>
           </div>

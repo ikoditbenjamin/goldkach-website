@@ -180,7 +180,9 @@ export default function InsightsPage() {
             Explore our insights on market trends, expert picks &amp; timely investment insights
           </p>
           <Link
-            href="/contact"
+            href="https://goldkach.co.ug/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-8 py-3 rounded font-bold text-sm transition-all duration-200 hover:opacity-90"
             style={{ backgroundColor: '#1E9BF0', color: '#ffffff' }}
           >
@@ -240,13 +242,14 @@ export default function InsightsPage() {
               <p className="text-gray-600 mb-6 text-base">
                 Lets help you today to achieve your financial goals. Let&apos;s work together to build a brighter financial future.
               </p>
-              <Link
-                href="/contact"
+              <a
+                href="https://goldkach.co.ug/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-8 py-3 rounded font-bold text-sm transition-all duration-200 hover:opacity-90"
                 style={{ backgroundColor: '#2D2B6B', color: '#ffffff' }}>
-                
                 Invest Today
-              </Link>
+              </a>
             </div>
             <div className="flex-shrink-0 hidden md:block">
               <div className="w-64 h-64 rounded-full overflow-hidden animate-float-slow" style={{ backgroundColor: '#f0f4ff' }}>

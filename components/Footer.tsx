@@ -121,21 +121,26 @@ export default function Footer() {
             <div>
               <p className="text-base font-bold text-white mb-4">Connect</p>
               <div className="flex flex-col gap-3">
-                {[
-                  { label: "Sign In",    href: "#" },
-                  { label: "Contact Us", href: "/contact" },
-                ].map((link) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className="text-sm transition-colors duration-200"
-                    style={{ color: "rgba(255,255,255,0.80)" }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = "#1E9BF0")}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.80)")}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                <a
+                  href="https://goldkach.co.ug/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm transition-colors duration-200"
+                  style={{ color: "rgba(255,255,255,0.80)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#1E9BF0")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.80)")}
+                >
+                  Sign In
+                </a>
+                <Link
+                  href="/contact"
+                  className="text-sm transition-colors duration-200"
+                  style={{ color: "rgba(255,255,255,0.80)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#1E9BF0")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.80)")}
+                >
+                  Contact Us
+                </Link>
               </div>
             </div>
 

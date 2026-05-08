@@ -99,13 +99,15 @@ export default function ProductsPage() {
             <p className="text-lg text-white/90 font-semibold mb-8 max-w-md leading-relaxed">
               {current.sub}
             </p>
-            <Link
-              href="/contact"
+            <a
+              href="https://goldkach.co.ug/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-8 py-3 rounded font-bold text-sm transition-all duration-200 hover:opacity-90"
               style={{ backgroundColor: '#1E9BF0', color: '#ffffff' }}
             >
               Invest Today
-            </Link>
+            </a>
           </div>
 
           {/* Portrait circle */}
@@ -360,12 +362,14 @@ function FundCard({ title, description }: {title: string;description: string;}) 
           </div>
           <h4 className="text-base font-bold" style={{ color: '#2D2B6B' }}>{title}</h4>
         </div>
-        <button
+        <a
+          href="https://goldkach.co.ug/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex-shrink-0 px-4 py-2 rounded text-xs font-bold text-white transition-all duration-200 hover:opacity-90 whitespace-nowrap"
           style={{ backgroundColor: '#38BDF8', color: '#0A1628' }}>
-          
-          Download Fact Sheet
-        </button>
+          Invest Today
+        </a>
       </div>
       <p className="text-gray-600 text-sm leading-relaxed">
         {expanded ? description : preview}
