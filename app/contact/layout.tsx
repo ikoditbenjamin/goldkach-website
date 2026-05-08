@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Contact GoldKach Limited",
     description:
       "Have a question? Reach our team for investment advisory, wealth management, and corporate financial services. We're ready to help.",
-    url: "https://www.goldkach.co.ug/contact",
+    url: "https://www.goldkach.com/contact",
     images: [
       {
         url: "/LOGO.png",

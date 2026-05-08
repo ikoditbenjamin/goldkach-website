@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     title: "Market Insights — GoldKach Limited",
     description:
       "Explore expert analysis on ETFs, global market trends, emerging markets, and investment strategies tailored for African investors.",
-    url: "https://www.goldkach.co.ug/insights",
+    url: "https://www.goldkach.com/insights",
     images: [
       {
-        url: "/insights/insight.jpg",
+        url: "/LOGO.png",
         width: 1200,
         height: 630,
         alt: "GoldKach Market Insights — Investment Analysis and Global Trends",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Market Insights — GoldKach Limited",
     description:
       "Expert analysis on ETFs, global market trends, emerging markets, and investment strategies for African investors.",
-    images: ["/insights/insight.jpg"],
+    images: ["/LOGO.png"],
   },
 };
 

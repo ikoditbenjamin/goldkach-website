@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter, usePathname } from "next/navigation";
 import Icon from "@/components/ui/AppIcon";
 
 const navLinks = [
@@ -13,17 +14,22 @@ const navLinks = [
 ];
 
 const countries = [
-  { name: "Uganda",         code: "UG", flag: "/flags/uganda.png" },
-  { name: "Kenya",          code: "KE", flag: "/flags/kenya.png"  },
-  { name: "United Kingdom", code: "GB", flag: "/flags/uk.png"     },
+  { name: "Uganda",         code: "UG", flag: "/flags/uganda.png", href: "/homeug" },
+  { name: "Kenya",          code: "KE", flag: "/flags/kenya.png",  href: "/homeke" },
+  { name: "United Kingdom", code: "GB", flag: "/flags/uk.png",     href: "/homeuk" },
 ];
 
 export default function Header() {
+  const router   = useRouter();
+  const pathname = usePathname();
+
   const [scrolled,      setScrolled]      = useState(false);
   const [menuOpen,      setMenuOpen]      = useState(false);
   const [countriesOpen, setCountriesOpen] = useState(false);
-  const [selected,      setSelected]      = useState(countries[0]);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Derive selected country from current path
+  const selected = countries.find((c) => pathname === c.href) ?? countries[0];
 
   /* ── scroll shadow ── */
   useEffect(() => {
@@ -196,7 +202,7 @@ export default function Header() {
                       key={country.name}
                       role="option"
                       aria-selected={selected.name === country.name}
-                      onClick={() => { setSelected(country); setCountriesOpen(false); }}
+                      onClick={() => { router.push(country.href); setCountriesOpen(false); }}
                       className="w-full px-4 py-3 text-sm text-white hover:bg-[#1E9BF0]/20 hover:text-[#1E9BF0] transition-colors duration-150 flex items-center justify-between gap-3"
                       style={{
                         backgroundColor: selected.name === country.name ? "rgba(30,155,240,0.15)" : "transparent",
@@ -269,7 +275,7 @@ export default function Header() {
             {countries.map((country) => (
               <button
                 key={country.name}
-                onClick={() => { setSelected(country); closeMenu(); }}
+                onClick={() => { router.push(country.href); closeMenu(); }}
                 className="flex items-center justify-between py-2.5 px-2 text-base text-white/80 hover:text-[#1E9BF0] transition-colors rounded"
                 style={{ backgroundColor: selected.name === country.name ? "rgba(30,155,240,0.12)" : "transparent" }}
               >

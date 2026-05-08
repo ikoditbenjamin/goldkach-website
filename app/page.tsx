@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "GoldKach Limited — Unlocking Global Investments",
     description:
       "CMA-regulated investment management firm offering wealth management, investment advisory, and global market access for individuals and institutions across Africa.",
-    url: "https://www.goldkach.co.ug",
+    url: "https://www.goldkach.com",
     images: [
       {
         url: "/hero/hero.png",

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Investment Products — GoldKach Limited",
     description:
       "Access managed accounts, growth funds, balanced funds, income funds, and ETFs designed to help individuals and institutions across Africa grow their wealth globally.",
-    url: "https://www.goldkach.co.ug/products",
+    url: "https://www.goldkach.com/products",
     images: [
       {
         url: "/LOGO.png",
