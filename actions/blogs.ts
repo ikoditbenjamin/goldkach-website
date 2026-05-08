@@ -1,8 +1,15 @@
 "use server";
 
-import { MetaPros } from "@/components/dashboard/blogs/blog-edit-form";
 import { db } from "@/prisma/db";
 import { revalidatePath } from "next/cache";
+
+export type MetaPros = {
+  thumbnail?: string;
+  description?: string;
+  title?: string;
+  pdfUrl?: string;
+  videoUrl?: string;
+};
 
 export type BlogCategoryProps = {
   name: string;
