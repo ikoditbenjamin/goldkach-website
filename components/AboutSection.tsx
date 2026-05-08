@@ -37,7 +37,7 @@ export default function AboutSection() {
           <div className="relative reveal-left">
             <div className="w-full h-full min-h-[480px] overflow-hidden rounded-sm relative">
               <AppImage
-                src="/about/Goldkach-team.png"
+                src="/about/capabilities.png"
                 alt="GoldKach team collaborating"
                 fill
                 className="object-cover"
