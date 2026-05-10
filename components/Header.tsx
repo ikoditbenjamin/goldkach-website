@@ -297,49 +297,44 @@ export default function Header() {
           {/* ── Country selector row ── */}
           <button
             onClick={() => setCountriesOpen(!countriesOpen)}
-            className="w-full flex items-center justify-between px-6 py-5 text-lg font-bold border-b transition-colors duration-200"
+            className="w-full flex items-center justify-between px-6 py-5 text-lg font-bold border-b transition-colors duration-200 cursor-pointer"
             style={{
               color: countriesOpen ? "#1E9BF0" : "#ffffff",
               borderColor: "rgba(255,255,255,0.08)",
             }}
           >
-            <span>{selected.name}</span>
-            <div className="flex items-center gap-2">
-              <Image src={selected.flag} alt={selected.name} width={28} height={19} className="object-cover rounded-sm" />
-              <div
-                className="w-7 h-7 flex items-center justify-center rounded border"
-                style={{ borderColor: "rgba(30,155,240,0.40)" }}
-              >
-                <Icon
-                  name="ChevronDownIcon"
-                  size={14}
-                  variant="outline"
-                  className={`transition-transform duration-200 text-[#1E9BF0] ${countriesOpen ? "rotate-180" : ""}`}
-                />
-              </div>
+            <span>Select a Country</span>
+            <div
+              className="w-7 h-7 flex items-center justify-center rounded border"
+              style={{ borderColor: "rgba(30,155,240,0.40)" }}
+            >
+              <Icon
+                name="ChevronDownIcon"
+                size={14}
+                variant="outline"
+                className={`transition-transform duration-200 text-[#1E9BF0] ${countriesOpen ? "rotate-180" : ""}`}
+              />
             </div>
           </button>
 
-          {/* Country list — expands inline */}
-          {countriesOpen && (
-            <div style={{ backgroundColor: "rgba(0,0,0,0.15)" }}>
-              {countries.map((country) => (
-                <button
-                  key={country.name}
-                  onClick={() => { router.push(country.href); closeMenu(); setCountriesOpen(false); }}
-                  className="w-full flex items-center justify-between px-8 py-4 text-base border-b transition-colors duration-150"
-                  style={{
-                    color: selected.name === country.name ? "#1E9BF0" : "rgba(255,255,255,0.80)",
-                    borderColor: "rgba(255,255,255,0.06)",
-                    backgroundColor: selected.name === country.name ? "rgba(30,155,240,0.10)" : "transparent",
-                  }}
-                >
-                  <span className="font-medium">{country.name}</span>
-                  <Image src={country.flag} alt={country.name} width={32} height={22} className="object-cover rounded-sm" />
-                </button>
-              ))}
-            </div>
-          )}
+          {/* Country list — always visible on mobile, no collapse */}
+          <div>
+            {countries.map((country) => (
+              <button
+                key={country.name}
+                onClick={() => { router.push(country.href); closeMenu(); setCountriesOpen(false); }}
+                className="w-full flex items-center justify-between px-8 py-4 text-base border-b transition-colors duration-150 cursor-pointer"
+                style={{
+                  color: selected.name === country.name ? "#1E9BF0" : "rgba(255,255,255,0.80)",
+                  borderColor: "rgba(255,255,255,0.06)",
+                  backgroundColor: selected.name === country.name ? "rgba(30,155,240,0.10)" : "transparent",
+                }}
+              >
+                <span className="font-medium">{country.name}</span>
+                <Image src={country.flag} alt={country.name} width={32} height={22} className="object-cover rounded-sm" />
+              </button>
+            ))}
+          </div>
 
           {/* ── Sign In row ── */}
           <a
