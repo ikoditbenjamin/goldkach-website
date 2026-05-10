@@ -49,14 +49,14 @@ export default function Footer() {
           {/* Actions */}
           <div className="flex flex-wrap items-center gap-4 reveal-up stagger-2">
             <a
-              href="/contact"
-              className="btn-primary"
+              href="tel:+256393246074"
+              className="btn-primary cursor-pointer"
             >
               Request Consultation
             </a>
             <a
-              href="tel:+2562009033140"
-              className="flex items-center gap-3 px-6 py-3 rounded-sm text-white transition-colors duration-200 hover:bg-white/5"
+              href="tel:+256393246074"
+              className="flex items-center gap-3 px-6 py-3 rounded-sm text-white transition-colors duration-200 hover:bg-white/5 cursor-pointer"
               style={{ border: "1px solid rgba(255,255,255,0.20)" }}
             >
               <Icon name="PhoneIcon" size={16} variant="outline" className="text-[#1E9BF0]" />

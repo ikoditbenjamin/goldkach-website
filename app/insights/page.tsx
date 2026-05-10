@@ -26,7 +26,7 @@ const articles: Article[] = [
   title: 'AI Boom Fuels Growth in Semiconductor ETFs – Is SOXX a Buy?',
   excerpt: 'The rapid rise of Artificial Intelligence (AI) is transforming industries worldwide, from healthcare and finance to autonomous vehicles and smart devices.',
   category: 'Technology',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1455244a8-1777885331836.png",
+  image: "/insights/boom.png",
   alt: 'Semiconductor chips and AI technology concept for investment insights',
   featured: true
 },
@@ -35,7 +35,7 @@ const articles: Article[] = [
   title: 'SCHD: Stability, Dividends & Performance in One Package',
   excerpt: 'For investors seeking a balance between income and capital appreciation, the Schwab U.S. Dividend Equity ETF (SCHD) has long stood as a standard bearer. In Q1 2025, it reaffirmed its place as a top holding in income-focused portfolios.',
   category: 'Dividends',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_13a92d3fc-1777885332795.png",
+  image: "/insights/SCHD.png",
   alt: 'Stock market charts showing dividend performance and stability metrics',
   featured: true
 },
@@ -44,7 +44,7 @@ const articles: Article[] = [
   title: 'HYG in 2025: Navigating High Yields Amid Market Volatility',
   excerpt: 'In an investment landscape marked by economic uncertainty and fluctuating interest rates, the iShares iBoxx $ High Yield Corporate Bond ETF (HYG) has demonstrated resilience.',
   category: 'Bonds',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_120ee62d3-1777885332991.png",
+  image: "/insights/HYG.png",
   alt: 'High yield bond market volatility chart with financial data overlay',
   featured: true
 },
@@ -53,7 +53,7 @@ const articles: Article[] = [
   title: 'The Contrarian Play: Why BKLN Could Skyrocket 15% in 2025',
   excerpt: 'While most investors chase private credit boom or press-gang the Invesco Senior Loan ETF (BKLN) has posed for a potential breakout. Here\'s why it deserves a hard look if you are looking away.',
   category: 'ETFs',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_135f58255-1777885332451.png",
+  image: "/insights/Contra.png",
   alt: 'Financial chart showing loan ETF performance and contrarian investment opportunity'
 },
 {
@@ -61,7 +61,7 @@ const articles: Article[] = [
   title: 'Market Rebound: iShares Russell 2000 ETF Records $787M Inflows',
   excerpt: 'The iShares Russell 2000 ETF (IWM) recorded $787 million in net inflows last Friday—despite widespread market volatility triggered by escalating conflict between Israel and Iran.',
   category: 'Market News',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_10996605a-1777885332136.png",
+  image: "/insights/rebound.png",
   alt: 'Russell 2000 small cap ETF performance chart showing market rebound'
 },
 {
@@ -69,7 +69,7 @@ const articles: Article[] = [
   title: 'AI Stocks Are Redefining the Market',
   excerpt: 'Artificial intelligence is no longer just a buzzword—it\'s a market mover. Since the start of 2023, AI-related stocks have outperformed nearly every other sector, with companies like NVIDIA, Microsoft, and Amazon driving record highs across major indices.',
   category: 'Technology',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1c3160622-1777885331794.png",
+  image: "/insights/Stocks.png",
   alt: 'AI technology stocks performance chart with NVIDIA and Microsoft data'
 },
 {
@@ -77,7 +77,7 @@ const articles: Article[] = [
   title: "Africa's Place in Global Portfolios: Are Frontier Markets Back?",
   excerpt: 'As global markets reel from geopolitical shocks and interest rate uncertainty, savvy investors are revisiting less conventional regions — and Africa is re-entering the conversation.',
   category: 'Emerging Markets',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1e61c29f3-1772841002296.png",
+  image: "/insights/Africa.png",
   alt: 'African continent map with investment growth indicators and market data'
 },
 {
@@ -85,7 +85,7 @@ const articles: Article[] = [
   title: 'Rising BRICS: Can East Africa Ride the Emerging Power Wave?',
   excerpt: 'The global economic landscape is shifting—and fast. The BRICS bloc (Brazil, Russia, India, China, and South Africa) has expanded its reach, adding new heavyweight members like Egypt, Ethiopia, UAE, Saudi Arabia, and even Indonesia.',
   category: 'Global Markets',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_181dce2d7-1777885332585.png",
+  image: "/insights/Rising.png",
   alt: 'BRICS nations map showing emerging market economic growth and expansion'
 },
 {
@@ -93,7 +93,7 @@ const articles: Article[] = [
   title: 'Global Market Outlook: November 2025 Edition',
   excerpt: 'Markets in Motion — Key Trends Shaping Investment Strategies. Global markets closed November on a mixed yet constructive note, reflecting shifting investor sentiment, sector rotation, and emerging clarity around policy direction.',
   category: 'Market Outlook',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1135cafb9-1777885332333.png",
+  image: "/insights/global.png",
   alt: 'Global financial markets overview chart for November 2025 investment outlook'
 },
 {
@@ -101,7 +101,7 @@ const articles: Article[] = [
   title: 'Investing for 2026 and Beyond',
   excerpt: 'The global investment landscape is entering a new phase defined by shifting capital flows, evolving trade relationships, technological acceleration, and changing monetary conditions. For African investors, this moment presents both opportunity and challenge.',
   category: 'Investment Strategy',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_12421743f-1764670653945.png",
+  image: "/insights/investing.png",
   alt: 'Future investment strategy concept with 2026 financial planning visualization'
 },
 {
@@ -109,7 +109,7 @@ const articles: Article[] = [
   title: 'What the US-Israel-Iran War Means for Investors',
   excerpt: 'The escalating conflict between the United States, Israel, and Iran has injected significant volatility into global markets. Energy prices have surged, equities have fluctuated, and investors are shifting capital into defensive assets.',
   category: 'Geopolitics',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_10b3df7a8-1774042825827.png",
+  image: "/insights/israel.png",
   alt: 'Geopolitical conflict impact on global investment markets and energy prices'
 }];
 

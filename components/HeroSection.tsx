@@ -153,11 +153,11 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <a href="#contact" className="btn-primary">
+            <a href="tel:+256393246074" className="btn-primary cursor-pointer">
               Free Consultation
               <Icon name="ArrowRightIcon" size={16} variant="outline" />
             </a>
-            <a href="https://goldkach.co.ug/" target="_blank" rel="noopener noreferrer" className="btn-outline">
+            <a href="https://goldkach.co.ug/" target="_blank" rel="noopener noreferrer" className="btn-outline cursor-pointer">
               Invest Now
             </a>
           </div>

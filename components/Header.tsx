@@ -223,14 +223,14 @@ export default function Header() {
             </div>
 
             {/* Free Consultation CTA */}
-            <Link
-              href="/contact"
-              className="flex items-center gap-2 px-5 py-2.5 rounded text-sm font-bold transition-all duration-200 hover:opacity-90"
+            <a
+              href="tel:+256393246074"
+              className="flex items-center gap-2 px-5 py-2.5 rounded text-sm font-bold transition-all duration-200 hover:opacity-90 cursor-pointer"
               style={{ backgroundColor: "#ffffff", color: "#2D2B6B", border: "2px solid rgba(255,255,255,0.3)" }}
             >
               <Icon name="PhoneIcon" size={15} variant="outline" className="text-[#1E9BF0]" />
               Free Consultation
-            </Link>
+            </a>
           </div>
 
           {/* Mobile hamburger */}
@@ -252,54 +252,131 @@ export default function Header() {
           MOBILE MENU OVERLAY
       ════════════════════════════════════════ */}
       <div
-        className={`fixed inset-0 z-40 flex flex-col justify-center items-center transition-transform duration-500 ${
+        className={`fixed inset-0 z-40 flex flex-col transition-transform duration-500 ${
           menuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
         style={{ backgroundColor: "#2D2B6B" }}
         aria-hidden={!menuOpen}
       >
-        <div className="flex flex-col gap-6 text-center w-full px-8">
+        {/* ── Top bar: logo + close ── */}
+        <div className="flex items-center justify-between px-6 py-4 border-b" style={{ borderColor: "rgba(255,255,255,0.10)" }}>
+          <Link href="/" onClick={closeMenu} aria-label="GoldKach Home">
+            <Image
+              src="/goldkach.png"
+              alt="GoldKach Logo"
+              width={130}
+              height={40}
+              className="object-contain h-10 w-auto"
+              priority
+            />
+          </Link>
+          <button
+            onClick={closeMenu}
+            aria-label="Close menu"
+            className="w-9 h-9 flex items-center justify-center rounded border text-white"
+            style={{ borderColor: "rgba(255,255,255,0.25)" }}
+          >
+            <Icon name="XMarkIcon" size={20} variant="outline" />
+          </button>
+        </div>
+
+        {/* ── Nav links — left-aligned with dividers ── */}
+        <div className="flex-1 overflow-y-auto">
           {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
               onClick={closeMenu}
-              className="text-2xl font-bold text-white hover:text-[#1E9BF0] transition-colors duration-200"
+              className="flex items-center px-6 py-5 text-lg font-bold text-white hover:text-[#1E9BF0] transition-colors duration-200 border-b"
+              style={{ borderColor: "rgba(255,255,255,0.08)" }}
             >
               {link.label}
             </Link>
           ))}
 
-          <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-white/10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-1">Select a Country</p>
-            {countries.map((country) => (
-              <button
-                key={country.name}
-                onClick={() => { router.push(country.href); closeMenu(); }}
-                className="flex items-center justify-between py-2.5 px-2 text-base text-white/80 hover:text-[#1E9BF0] transition-colors rounded"
-                style={{ backgroundColor: selected.name === country.name ? "rgba(30,155,240,0.12)" : "transparent" }}
+          {/* ── Country selector row ── */}
+          <button
+            onClick={() => setCountriesOpen(!countriesOpen)}
+            className="w-full flex items-center justify-between px-6 py-5 text-lg font-bold border-b transition-colors duration-200"
+            style={{
+              color: countriesOpen ? "#1E9BF0" : "#ffffff",
+              borderColor: "rgba(255,255,255,0.08)",
+            }}
+          >
+            <span>{selected.name}</span>
+            <div className="flex items-center gap-2">
+              <Image src={selected.flag} alt={selected.name} width={28} height={19} className="object-cover rounded-sm" />
+              <div
+                className="w-7 h-7 flex items-center justify-center rounded border"
+                style={{ borderColor: "rgba(30,155,240,0.40)" }}
               >
-                <span>{country.name}</span>
-                <Image
-                  src={country.flag}
-                  alt={country.name}
-                  width={32}
-                  height={22}
-                  className="object-cover rounded-sm"
+                <Icon
+                  name="ChevronDownIcon"
+                  size={14}
+                  variant="outline"
+                  className={`transition-transform duration-200 text-[#1E9BF0] ${countriesOpen ? "rotate-180" : ""}`}
                 />
-              </button>
-            ))}
-          </div>
+              </div>
+            </div>
+          </button>
 
-          <Link
-            href="/contact"
+          {/* Country list — expands inline */}
+          {countriesOpen && (
+            <div style={{ backgroundColor: "rgba(0,0,0,0.15)" }}>
+              {countries.map((country) => (
+                <button
+                  key={country.name}
+                  onClick={() => { router.push(country.href); closeMenu(); setCountriesOpen(false); }}
+                  className="w-full flex items-center justify-between px-8 py-4 text-base border-b transition-colors duration-150"
+                  style={{
+                    color: selected.name === country.name ? "#1E9BF0" : "rgba(255,255,255,0.80)",
+                    borderColor: "rgba(255,255,255,0.06)",
+                    backgroundColor: selected.name === country.name ? "rgba(30,155,240,0.10)" : "transparent",
+                  }}
+                >
+                  <span className="font-medium">{country.name}</span>
+                  <Image src={country.flag} alt={country.name} width={32} height={22} className="object-cover rounded-sm" />
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* ── Sign In row ── */}
+          <a
+            href="https://goldkach.co.ug/"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={closeMenu}
-            className="mt-4 flex items-center justify-center gap-2 px-8 py-3 rounded font-bold text-sm"
+            className="flex items-center px-6 py-5 text-lg font-bold text-white hover:text-[#1E9BF0] transition-colors duration-200 border-b"
+            style={{ borderColor: "rgba(255,255,255,0.08)" }}
+          >
+            Sign In
+          </a>
+        </div>
+
+        {/* ── Bottom CTAs ── */}
+        <div className="px-6 py-6 flex flex-col gap-3 border-t" style={{ borderColor: "rgba(255,255,255,0.10)" }}>
+          {/* Invest Today */}
+          <a
+            href="https://goldkach.co.ug/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeMenu}
+            className="flex items-center justify-center gap-2 w-full py-3.5 rounded-sm text-sm font-bold transition-all duration-200 hover:opacity-90"
             style={{ backgroundColor: "#1E9BF0", color: "#ffffff" }}
+          >
+            Invest Today
+          </a>
+          {/* Free Consultation */}
+          <a
+            href="tel:+256393246074"
+            onClick={closeMenu}
+            className="flex items-center justify-center gap-2 w-full py-3.5 rounded-sm text-sm font-bold transition-all duration-200 hover:opacity-90 cursor-pointer"
+            style={{ backgroundColor: "rgba(255,255,255,0.12)", color: "#ffffff", border: "1px solid rgba(255,255,255,0.25)" }}
           >
             <Icon name="PhoneIcon" size={16} variant="outline" />
             Free Consultation
-          </Link>
+          </a>
         </div>
       </div>
     </>
