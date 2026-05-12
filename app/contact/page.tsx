@@ -104,8 +104,8 @@ export default function ContactPage() {
               </svg>
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: '#2D2B6B' }}>Email</p>
-              <a href="mailto:info@goldkach.co.ug" className="text-sm" style={{ color: '#1E9BF0' }}>
+              <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: '#38BDF8' }}>Email</p>
+              <a href="mailto:info@goldkach.co.ug" className="text-sm" style={{ color: '#ffffff' }}>
                 info@goldkach.co.ug
               </a>
             </div>
@@ -122,8 +122,8 @@ export default function ContactPage() {
               </svg>
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: '#2D2B6B' }}>Phone</p>
-              <a href="tel:+256200903314" className="text-sm font-semibold" style={{ color: '#2D2B6B' }}>
+              <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: '#38BDF8' }}>Phone</p>
+              <a href="tel:+256200903314" className="text-sm font-semibold" style={{ color: '#ffffff' }}>
                 +256 200 903 314
               </a>
             </div>
@@ -140,8 +140,8 @@ export default function ContactPage() {
               </svg>
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: '#2D2B6B' }}>Free Call</p>
-              <a href="tel:+256393246074" className="text-sm font-semibold" style={{ color: '#2D2B6B' }}>
+              <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: '#38BDF8' }}>Free Call</p>
+              <a href="tel:+256393246074" className="text-sm font-semibold" style={{ color: '#ffffff' }}>
                 +256 393 246 074
               </a>
             </div>
@@ -159,8 +159,8 @@ export default function ContactPage() {
               </svg>
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: '#2D2B6B' }}>Address</p>
-              <p className="text-sm font-semibold" style={{ color: '#2D2B6B' }}>
+              <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: '#38BDF8' }}>Address</p>
+              <p className="text-sm font-semibold" style={{ color: '#ffffff' }}>
                 Kanjokya Street-Kanjokya House, Plot 90<br />
                 Kampala, Uganda
               </p>
@@ -179,10 +179,10 @@ export default function ContactPage() {
 
             {/* ── Left: Form ── */}
             <div className="p-8 md:p-10">
-              <h2 className="text-2xl font-bold mb-2" style={{ color: '#2D2B6B' }}>
+              <h2 className="text-2xl font-bold mb-2" style={{ color: '#38BDF8' }}>
                 Send your message via below form
               </h2>
-              <p className="text-sm mb-8" style={{ color: 'rgba(45,43,107,0.55)' }}>
+              <p className="text-sm mb-8" style={{ color: 'rgba(255,255,255,0.55)' }}>
                 We&apos;ll respond within one to two business days.
               </p>
 
@@ -196,8 +196,8 @@ export default function ContactPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold mb-2" style={{ color: '#2D2B6B' }}>Thank you!</h3>
-                  <p className="text-sm text-gray-500">Your message has been received. We&apos;ll be in touch shortly.</p>
+                  <h3 className="text-xl font-bold mb-2" style={{ color: '#38BDF8' }}>Thank you!</h3>
+                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.60)' }}>Your message has been received. We&apos;ll be in touch shortly.</p>
                   <button
                     onClick={() => { setSubmitted(false); setFormData({ name: '', email: '', phone: '', department: '', message: '' }); }}
                     className="mt-6 px-6 py-2.5 rounded text-sm font-semibold text-white transition hover:opacity-90"
@@ -217,8 +217,8 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 text-sm rounded border focus:outline-none focus:ring-2"
-                      style={{ borderColor: 'rgba(45,43,107,0.15)', backgroundColor: '#F8FAFF', color: '#2D2B6B', focusRingColor: '#1E9BF0' } as React.CSSProperties}
+                      className="w-full px-4 py-3 text-sm rounded border focus:outline-none focus:ring-2 focus:ring-[#1E9BF0]"
+                      style={{ borderColor: 'rgba(30,155,240,0.25)', backgroundColor: '#0D0C24', color: '#ffffff' } as React.CSSProperties}
                     />
                     <input
                       type="email"
@@ -227,8 +227,8 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 text-sm rounded border focus:outline-none focus:ring-2"
-                      style={{ borderColor: 'rgba(45,43,107,0.15)', backgroundColor: '#F8FAFF', color: '#2D2B6B' }}
+                      className="w-full px-4 py-3 text-sm rounded border focus:outline-none focus:ring-2 focus:ring-[#1E9BF0]"
+                      style={{ borderColor: 'rgba(30,155,240,0.25)', backgroundColor: '#0D0C24', color: '#ffffff' }}
                     />
                   </div>
 
@@ -240,15 +240,15 @@ export default function ContactPage() {
                       placeholder="Phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 text-sm rounded border focus:outline-none focus:ring-2"
-                      style={{ borderColor: 'rgba(45,43,107,0.15)', backgroundColor: '#F8FAFF', color: '#2D2B6B' }}
+                      className="w-full px-4 py-3 text-sm rounded border focus:outline-none focus:ring-2 focus:ring-[#1E9BF0]"
+                      style={{ borderColor: 'rgba(30,155,240,0.25)', backgroundColor: '#0D0C24', color: '#ffffff' }}
                     />
                     <select
                       name="department"
                       value={formData.department}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 text-sm rounded border focus:outline-none focus:ring-2 appearance-none"
-                      style={{ borderColor: 'rgba(45,43,107,0.15)', backgroundColor: '#F8FAFF', color: formData.department ? '#2D2B6B' : 'rgba(45,43,107,0.45)' }}
+                      className="w-full px-4 py-3 text-sm rounded border focus:outline-none focus:ring-2 focus:ring-[#1E9BF0] appearance-none"
+                      style={{ borderColor: 'rgba(30,155,240,0.25)', backgroundColor: '#0D0C24', color: formData.department ? '#ffffff' : 'rgba(255,255,255,0.40)' }}
                     >
                       <option value="" disabled>Business Department ▾</option>
                       {departments.map((d) => (
@@ -265,14 +265,14 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 text-sm rounded border focus:outline-none focus:ring-2 resize-none"
-                    style={{ borderColor: 'rgba(45,43,107,0.15)', backgroundColor: '#F8FAFF', color: '#2D2B6B' }}
+                    className="w-full px-4 py-3 text-sm rounded border focus:outline-none focus:ring-2 focus:ring-[#1E9BF0] resize-none"
+                    style={{ borderColor: 'rgba(30,155,240,0.25)', backgroundColor: '#0D0C24', color: '#ffffff' }}
                   />
 
                   <button
                     type="submit"
                     className="px-8 py-3 rounded font-bold text-sm text-white transition-all duration-200 hover:opacity-90"
-                    style={{ backgroundColor: '#2D2B6B' }}
+                    style={{ backgroundColor: '#1E9BF0' }}
                   >
                     Submit
                   </button>
