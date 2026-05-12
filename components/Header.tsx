@@ -304,50 +304,28 @@ export default function Header() {
             </Link>
           ))}
 
-          {/* ── Country selector row — shows selected name in sky blue ── */}
+          {/* ── Country rows — always visible, direct links ── */}
           <div className="border-b" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
-            {/* Toggle row */}
-            <button
-              onClick={() => setCountriesOpen(!countriesOpen)}
-              className="w-full flex items-center justify-between px-6 py-5 text-lg font-bold transition-colors duration-200 cursor-pointer"
-              style={{ color: "#1E9BF0" }}
-            >
-              <span>{selected.name}</span>
-              <div
-                className="w-7 h-7 flex items-center justify-center rounded border"
-                style={{ borderColor: "rgba(30,155,240,0.50)" }}
+            <p className="px-6 pt-4 pb-2 text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.35)" }}>
+              Select a Country
+            </p>
+            {countries.map((country) => (
+              <a
+                key={country.name}
+                href={country.href}
+                className="flex items-center justify-between px-6 py-4 text-base font-semibold border-t"
+                style={{
+                  color: selected.name === country.name ? "#1E9BF0" : "rgba(255,255,255,0.85)",
+                  borderColor: "rgba(255,255,255,0.06)",
+                  backgroundColor: selected.name === country.name ? "rgba(30,155,240,0.10)" : "transparent",
+                  textDecoration: "none",
+                  display: "flex",
+                }}
               >
-                <Icon
-                  name="ChevronDownIcon"
-                  size={14}
-                  variant="outline"
-                  className={`transition-transform duration-200 text-[#1E9BF0] ${countriesOpen ? "rotate-180" : ""}`}
-                />
-              </div>
-            </button>
-
-            {/* Country list — completely outside the button, just inside the wrapper div */}
-            {countriesOpen && (
-              <div style={{ backgroundColor: "rgba(0,0,0,0.20)" }}>
-                {countries.map((country) => (
-                  <a
-                    key={country.name}
-                    href={country.href}
-                    className="flex items-center justify-between px-8 py-4 text-base border-t"
-                    style={{
-                      color: selected.name === country.name ? "#1E9BF0" : "rgba(255,255,255,0.85)",
-                      borderColor: "rgba(255,255,255,0.06)",
-                      backgroundColor: selected.name === country.name ? "rgba(30,155,240,0.12)" : "transparent",
-                      textDecoration: "none",
-                      display: "flex",
-                    }}
-                  >
-                    <span className="font-semibold">{country.name}</span>
-                    <Image src={country.flag} alt={country.name} width={32} height={22} className="object-cover rounded-sm" />
-                  </a>
-                ))}
-              </div>
-            )}
+                <span>{country.name}</span>
+                <Image src={country.flag} alt={country.name} width={32} height={22} className="object-cover rounded-sm" />
+              </a>
+            ))}
           </div>
 
           {/* ── Sign In row ── */}
