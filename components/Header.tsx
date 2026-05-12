@@ -40,8 +40,14 @@ export default function Header() {
 
   /* ── lock body scroll when mobile menu open ── */
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
 
   /* ── close countries dropdown on outside click ── */
@@ -252,10 +258,10 @@ export default function Header() {
           MOBILE MENU OVERLAY
       ════════════════════════════════════════ */}
       <div
-        className={`fixed inset-0 z-40 flex flex-col transition-transform duration-500 ${
+        className={`fixed inset-0 flex flex-col transition-transform duration-500 ${
           menuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
-        style={{ backgroundColor: "#2D2B6B" }}
+        style={{ backgroundColor: "#2D2B6B", zIndex: 9999 }}
         aria-hidden={!menuOpen}
       >
         {/* ── Top bar: logo + close ── */}
@@ -299,48 +305,50 @@ export default function Header() {
           ))}
 
           {/* ── Country selector row — shows selected name in sky blue ── */}
-          <button
-            onClick={() => setCountriesOpen(!countriesOpen)}
-            className="w-full flex items-center justify-between px-6 py-5 text-lg font-bold border-b transition-colors duration-200 cursor-pointer"
-            style={{
-              color: "#1E9BF0",
-              borderColor: "rgba(255,255,255,0.08)",
-            }}
-          >
-            <span>{selected.name}</span>
-            <div
-              className="w-7 h-7 flex items-center justify-center rounded border"
-              style={{ borderColor: "rgba(30,155,240,0.50)" }}
+          <div className="border-b" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
+            {/* Toggle row */}
+            <button
+              onClick={() => setCountriesOpen(!countriesOpen)}
+              className="w-full flex items-center justify-between px-6 py-5 text-lg font-bold transition-colors duration-200 cursor-pointer"
+              style={{ color: "#1E9BF0" }}
             >
-              <Icon
-                name="ChevronDownIcon"
-                size={14}
-                variant="outline"
-                className={`transition-transform duration-200 text-[#1E9BF0] ${countriesOpen ? "rotate-180" : ""}`}
-              />
-            </div>
-          </button>
+              <span>{selected.name}</span>
+              <div
+                className="w-7 h-7 flex items-center justify-center rounded border"
+                style={{ borderColor: "rgba(30,155,240,0.50)" }}
+              >
+                <Icon
+                  name="ChevronDownIcon"
+                  size={14}
+                  variant="outline"
+                  className={`transition-transform duration-200 text-[#1E9BF0] ${countriesOpen ? "rotate-180" : ""}`}
+                />
+              </div>
+            </button>
 
-          {/* Country list — hidden until toggled */}
-          {countriesOpen && (
-            <div style={{ backgroundColor: "rgba(0,0,0,0.20)" }}>
-              {countries.map((country) => (
-                <button
-                  key={country.name}
-                  onClick={() => { router.push(country.href); closeMenu(); setCountriesOpen(false); }}
-                  className="w-full flex items-center justify-between px-8 py-4 text-base border-b transition-colors duration-150 cursor-pointer"
-                  style={{
-                    color: selected.name === country.name ? "#1E9BF0" : "rgba(255,255,255,0.85)",
-                    borderColor: "rgba(255,255,255,0.06)",
-                    backgroundColor: selected.name === country.name ? "rgba(30,155,240,0.12)" : "transparent",
-                  }}
-                >
-                  <span className="font-semibold">{country.name}</span>
-                  <Image src={country.flag} alt={country.name} width={32} height={22} className="object-cover rounded-sm" />
-                </button>
-              ))}
-            </div>
-          )}
+            {/* Country list — completely outside the button, just inside the wrapper div */}
+            {countriesOpen && (
+              <div style={{ backgroundColor: "rgba(0,0,0,0.20)" }}>
+                {countries.map((country) => (
+                  <a
+                    key={country.name}
+                    href={country.href}
+                    className="flex items-center justify-between px-8 py-4 text-base border-t"
+                    style={{
+                      color: selected.name === country.name ? "#1E9BF0" : "rgba(255,255,255,0.85)",
+                      borderColor: "rgba(255,255,255,0.06)",
+                      backgroundColor: selected.name === country.name ? "rgba(30,155,240,0.12)" : "transparent",
+                      textDecoration: "none",
+                      display: "flex",
+                    }}
+                  >
+                    <span className="font-semibold">{country.name}</span>
+                    <Image src={country.flag} alt={country.name} width={32} height={22} className="object-cover rounded-sm" />
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
 
           {/* ── Sign In row ── */}
           <a
