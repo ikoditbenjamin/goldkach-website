@@ -52,13 +52,13 @@ export default function BlogSection() {
   }, []);
 
   return (
-    <section id="blog" className="py-20 px-6 bg-white" ref={sectionRef}>
+    <section id="blog" className="py-20 px-6" style={{ backgroundColor: '#0D0C24' }} ref={sectionRef}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
           <div>
             <span className="section-label reveal-fade">Insi</span>
-            <h2 className="font-bold text-3xl md:text-5xl leading-tight tracking-tight reveal-up stagger-1" style={{ color: "#2D2B6B" }}>
+            <h2 className="font-bold text-3xl md:text-5xl leading-tight tracking-tight reveal-up stagger-1" style={{ color: "#ffffff" }}>
               From the Blog
             </h2>
           </div>
@@ -80,7 +80,7 @@ export default function BlogSection() {
             className={`group reveal-up stagger-${i + 1}`}>
 
               {/* Image */}
-              <div className="w-full aspect-[16/10] overflow-hidden rounded-sm mb-5 relative" style={{ backgroundColor: "#F0F5FF" }}>
+              <div className="w-full aspect-[16/10] overflow-hidden rounded-sm mb-5 relative" style={{ backgroundColor: "rgba(30,155,240,0.08)" }}>
                 <AppImage
                 src={post.img}
                 alt={`Blog post thumbnail for: ${post.title}, financial insights from GoldKach`}
@@ -97,22 +97,22 @@ export default function BlogSection() {
               {/* Meta */}
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: "#1E9BF0" }}>{post.category}</span>
-                <span className="w-1 h-1 rounded-full" style={{ backgroundColor: "rgba(45,43,107,0.25)" }}></span>
-                <span className="text-xs" style={{ color: "rgba(45,43,107,0.55)" }}>{post.date}</span>
-                <span className="w-1 h-1 rounded-full" style={{ backgroundColor: "rgba(45,43,107,0.25)" }}></span>
-                <span className="text-xs" style={{ color: "rgba(45,43,107,0.55)" }}>{post.readTime}</span>
+                <span className="w-1 h-1 rounded-full" style={{ backgroundColor: "rgba(255,255,255,0.20)" }}></span>
+                <span className="text-xs" style={{ color: "rgba(255,255,255,0.45)" }}>{post.date}</span>
+                <span className="w-1 h-1 rounded-full" style={{ backgroundColor: "rgba(255,255,255,0.20)" }}></span>
+                <span className="text-xs" style={{ color: "rgba(255,255,255,0.45)" }}>{post.readTime}</span>
               </div>
 
-              <h3 className="font-semibold text-lg leading-snug tracking-tight mb-3 transition-colors duration-200" style={{ color: "#2D2B6B" }}>
+              <h3 className="font-semibold text-lg leading-snug tracking-tight mb-3 transition-colors duration-200" style={{ color: "#ffffff" }}>
                 <Link href={post.slug} className="hover:text-[#1E9BF0] transition-colors duration-200">{post.title}</Link>
               </h3>
 
               <Link
               href={post.slug}
               className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest hover:gap-3 transition-all duration-200"
-              style={{ color: "rgba(45,43,107,0.55)" }}
+              style={{ color: "rgba(255,255,255,0.45)" }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#1E9BF0")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(45,43,107,0.55)")}>
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.45)")}>
                 Read More
                 <Icon name="ArrowRightIcon" size={12} variant="outline" />
               </Link>

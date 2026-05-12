@@ -80,17 +80,17 @@ export default function TeamSection() {
   const member = team[current];
 
   return (
-    <section id="team" className="py-20 px-6 bg-white" ref={sectionRef}>
+    <section id="team" className="py-20 px-6" style={{ backgroundColor: '#0D0C24' }} ref={sectionRef}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-12 reveal-up">
           <span className="section-label">Who We Are</span>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <h2 className="font-bold text-4xl md:text-5xl leading-tight tracking-tight" style={{ color: '#2D2B6B' }}>
+            <h2 className="font-bold text-4xl md:text-5xl leading-tight tracking-tight" style={{ color: '#ffffff' }}>
               Meet Our Expert<br />
               <span className="text-gradient-sky">Advisors</span>
             </h2>
-            <p className="text-sm leading-relaxed max-w-md" style={{ color: 'rgba(45,43,107,0.60)' }}>
+            <p className="text-sm leading-relaxed max-w-md" style={{ color: 'rgba(255,255,255,0.55)' }}>
               Our team brings decades of combined expertise across investment management, infrastructure, healthcare, and financial accounting.
             </p>
           </div>
@@ -144,12 +144,12 @@ export default function TeamSection() {
           >
             <span
               className="text-xs font-semibold uppercase tracking-widest mb-3 block"
-              style={{ color: 'rgba(45,43,107,0.55)' }}
+              style={{ color: 'rgba(255,255,255,0.45)' }}
             >
               {member.experience}
             </span>
 
-            <h3 className="font-bold text-3xl md:text-4xl tracking-tight mb-2" style={{ color: '#2D2B6B' }}>
+            <h3 className="font-bold text-3xl md:text-4xl tracking-tight mb-2" style={{ color: '#ffffff' }}>
               {member.name}
             </h3>
 
@@ -161,7 +161,7 @@ export default function TeamSection() {
             <div
               className="text-sm leading-relaxed mb-8 pr-2 overflow-y-auto"
               style={{
-                color: 'rgba(45,43,107,0.70)',
+                color: 'rgba(255,255,255,0.65)',
                 maxHeight: '220px',
                 scrollbarWidth: 'thin',
                 scrollbarColor: 'rgba(30,155,240,0.3) transparent',
@@ -194,14 +194,14 @@ export default function TeamSection() {
               <button
                 onClick={() => navigate(-1)}
                 className="w-12 h-12 rounded-sm flex items-center justify-center transition-all duration-200"
-                style={{ border: '1px solid rgba(45,43,107,0.20)', color: '#2D2B6B' }}
+                style={{ border: '1px solid rgba(30,155,240,0.30)', color: '#1E9BF0' }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLButtonElement).style.backgroundColor = '#2D2B6B';
+                  (e.currentTarget as HTMLButtonElement).style.backgroundColor = '#1E9BF0';
                   (e.currentTarget as HTMLButtonElement).style.color = '#fff';
                 }}
                 onMouseLeave={(e) => {
                   (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'transparent';
-                  (e.currentTarget as HTMLButtonElement).style.color = '#2D2B6B';
+                  (e.currentTarget as HTMLButtonElement).style.color = '#1E9BF0';
                 }}
                 aria-label="Previous advisor"
               >
@@ -210,14 +210,14 @@ export default function TeamSection() {
               <button
                 onClick={() => navigate(1)}
                 className="w-12 h-12 rounded-sm flex items-center justify-center transition-all duration-200"
-                style={{ border: '1px solid rgba(45,43,107,0.20)', color: '#2D2B6B' }}
+                style={{ border: '1px solid rgba(30,155,240,0.30)', color: '#1E9BF0' }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLButtonElement).style.backgroundColor = '#2D2B6B';
+                  (e.currentTarget as HTMLButtonElement).style.backgroundColor = '#1E9BF0';
                   (e.currentTarget as HTMLButtonElement).style.color = '#fff';
                 }}
                 onMouseLeave={(e) => {
                   (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'transparent';
-                  (e.currentTarget as HTMLButtonElement).style.color = '#2D2B6B';
+                  (e.currentTarget as HTMLButtonElement).style.color = '#1E9BF0';
                 }}
                 aria-label="Next advisor"
               >

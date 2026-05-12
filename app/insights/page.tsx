@@ -126,7 +126,7 @@ export default function InsightsPage() {
   }, []);
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#ffffff' }}>
+    <div className="min-h-screen" style={{ backgroundColor: '#0D0C24' }}>
 
       {/* ══════════════════════════════════════
           HERO — sliding bg images, static text
@@ -208,7 +208,7 @@ export default function InsightsPage() {
       </section>
 
       {/* Featured Articles Grid */}
-      <section className="py-12 px-6" style={{ backgroundColor: '#f8f9fa' }}>
+      <section className="py-12 px-6" style={{ backgroundColor: '#141336' }}>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             {featuredArticles.map((article) =>
@@ -232,37 +232,36 @@ export default function InsightsPage() {
       </section>
 
       {/* CTA Banner */}
-      <section className="py-16 px-6" style={{ backgroundColor: '#ffffff' }}>
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="flex-1">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#2D2B6B', fontFamily: "'Book Antiqua', 'Palatino Linotype', serif" }}>
-                Ready to start your investment journey with GoldKach?
-              </h2>
-              <p className="text-gray-600 mb-6 text-base">
-                Lets help you today to achieve your financial goals. Let&apos;s work together to build a brighter financial future.
-              </p>
-              <a
-                href="https://goldkach.co.ug/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-8 py-3 rounded font-bold text-sm transition-all duration-200 hover:opacity-90"
-                style={{ backgroundColor: '#2D2B6B', color: '#ffffff' }}>
-                Invest Today
-              </a>
-            </div>
-            <div className="flex-shrink-0 hidden md:block">
-              <div className="w-64 h-64 rounded-full overflow-hidden animate-float-slow" style={{ backgroundColor: '#f0f4ff' }}>
-                <img
-                  src="https://img.rocket.new/generatedImages/rocket_gen_img_11ad01153-1767916622593.png"
-                  alt="GoldKach financial advisor ready to help with your investment journey"
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none';
-                  }} />
-                
-              </div>
-            </div>
+      <section className="relative py-20 px-6 overflow-hidden">
+        {/* Background image */}
+        <img
+          src="https://img.rocket.new/generatedImages/rocket_gen_img_11ad01153-1767916622593.png"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        {/* Dark navy overlay */}
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(to right, rgba(13,12,36,0.95) 0%, rgba(13,12,36,0.80) 50%, rgba(13,12,36,0.50) 100%)' }}
+        />
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white" style={{ fontFamily: "'Book Antiqua', 'Palatino Linotype', serif" }}>
+              Ready to start your investment journey with GoldKach?
+            </h2>
+            <p className="text-white/70 mb-8 text-base leading-relaxed">
+              Lets help you today to achieve your financial goals. Let&apos;s work together to build a brighter financial future.
+            </p>
+            <a
+              href="https://goldkach.co.ug/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 rounded font-bold text-sm transition-all duration-200 hover:opacity-90 cursor-pointer"
+              style={{ backgroundColor: '#1E9BF0', color: '#ffffff' }}>
+              Invest Today
+            </a>
           </div>
         </div>
       </section>
@@ -276,8 +275,8 @@ function ArticleCard({ article, featured }: {article: Article;featured?: boolean
     <div
       className="rounded-lg overflow-hidden flex flex-col h-full cursor-pointer transition-all duration-300"
       style={{
-        backgroundColor: featured ? '#2D2B6B' : '#ffffff',
-        border: featured ? 'none' : '1px solid #e5e7eb',
+        backgroundColor: featured ? '#2D2B6B' : '#1A1840',
+        border: featured ? 'none' : '1px solid rgba(30,155,240,0.18)',
         boxShadow: featured
           ? '0 10px 30px rgba(45,43,107,0.40), 0 4px 10px rgba(0,0,0,0.20)'
           : '0 8px 24px rgba(45,43,107,0.12), 0 2px 6px rgba(0,0,0,0.08)',
@@ -313,7 +312,7 @@ function ArticleCard({ article, featured }: {article: Article;featured?: boolean
       <div className="p-4 flex flex-col flex-1">
         <h3
           className="font-bold text-base mb-2 leading-snug"
-          style={{ color: featured ? '#ffffff' : '#2D2B6B', fontFamily: "'Book Antiqua', 'Palatino Linotype', serif" }}>
+          style={{ color: featured ? '#ffffff' : '#ffffff', fontFamily: "'Book Antiqua', 'Palatino Linotype', serif" }}>
           
           {article.title}
         </h3>

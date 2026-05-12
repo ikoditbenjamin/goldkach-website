@@ -43,7 +43,7 @@ function StatItem({
         borderRight: index < 3 ? '1px solid #1E9BF0' : 'none',
       }}
     >
-      <p className="stat-number mb-2">
+      <p className="text-4xl font-extrabold mb-2" style={{ color: '#ffffff' }}>
         {prefix && <span>{prefix}</span>}
         {count}
         <span>{suffix}</span>
@@ -77,8 +77,8 @@ export default function StatsSection() {
         (sectionRef as React.MutableRefObject<HTMLElement | null>).current = node;
         (triggerRef as React.MutableRefObject<HTMLElement | null>).current = node;
       }}
-      className="py-4 bg-white"
-      style={{ borderTop: '1px solid #1E9BF0', borderBottom: '1px solid #1E9BF0' }}
+      className="py-4"
+      style={{ backgroundColor: '#0D0C24', borderTop: '1px solid rgba(30,155,240,0.35)', borderBottom: '1px solid rgba(30,155,240,0.35)' }}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4">

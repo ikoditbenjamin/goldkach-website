@@ -42,7 +42,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#0D0C24]">
 
       {/* ══════════════════════════════════════
           HERO BANNER
@@ -90,7 +90,7 @@ export default function ContactPage() {
       {/* ══════════════════════════════════════
           CONTACT INFO CARDS
       ══════════════════════════════════════ */}
-      <section className="px-6 py-10 bg-white border-b" style={{ borderColor: 'rgba(45,43,107,0.08)' }}>
+      <section className="px-6 py-10 border-b" style={{ backgroundColor: '#141336', borderColor: 'rgba(30,155,240,0.12)' }}>
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
 
           {/* Email */}
@@ -173,9 +173,9 @@ export default function ContactPage() {
       {/* ══════════════════════════════════════
           FORM + MAP
       ══════════════════════════════════════ */}
-      <section className="px-6 py-14" style={{ backgroundColor: '#F0F5FF' }}>
+      <section className="px-6 py-14" style={{ backgroundColor: '#141336' }}>
         <div className="max-w-7xl mx-auto">
-          <div className="rounded-xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm" style={{ backgroundColor: '#ffffff' }}>
+          <div className="rounded-xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm" style={{ backgroundColor: '#1A1840' }}>
 
             {/* ── Left: Form ── */}
             <div className="p-8 md:p-10">

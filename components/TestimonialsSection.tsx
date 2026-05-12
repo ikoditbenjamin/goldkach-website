@@ -69,11 +69,11 @@ export default function TestimonialsSection() {
   const t = testimonials[current];
 
   return (
-    <section id="testimonials" className="py-20 px-6" style={{ backgroundColor: "#F0F5FF" }} ref={sectionRef}>
+    <section id="testimonials" className="py-20 px-6" style={{ backgroundColor: "#141336" }} ref={sectionRef}>
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12 reveal-up">
           <span className="section-label reveal-fade">Testimonials</span>
-          <h2 className="font-bold text-3xl md:text-5xl leading-tight tracking-tight reveal-up stagger-1" style={{ color: "#2D2B6B" }}>
+          <h2 className="font-bold text-3xl md:text-5xl leading-tight tracking-tight reveal-up stagger-1" style={{ color: "#ffffff" }}>
             What Our Customers Say
           </h2>
           <p className="text-sm mt-3" style={{ color: "#1E9BF0" }}>
@@ -83,8 +83,8 @@ export default function TestimonialsSection() {
 
         {/* Quote Card */}
         <div
-          className={`bg-white rounded-sm border p-8 md:p-12 reveal-up transition-opacity duration-300 ${animating ? 'opacity-0' : 'opacity-100'}`}
-          style={{ borderColor: "#1E9BF0" }}>
+          className={`rounded-sm border p-8 md:p-12 reveal-up transition-opacity duration-300 ${animating ? 'opacity-0' : 'opacity-100'}`}
+          style={{ borderColor: "rgba(30,155,240,0.30)", backgroundColor: "rgba(13,12,36,0.80)", backdropFilter: "blur(8px)" }}>
           
           {/* Quote Mark */}
           <div className="text-8xl font-extrabold leading-none mb-4 select-none" style={{ color: "rgba(30,155,240,0.15)" }}>&ldquo;</div>
@@ -113,7 +113,7 @@ export default function TestimonialsSection() {
                   className="object-cover" />
               </div>
               <div>
-                <p className="font-semibold text-base" style={{ color: "#2D2B6B" }}>{t.name}</p>
+                <p className="font-semibold text-base" style={{ color: "#ffffff" }}>{t.name}</p>
                 <p className="text-xs" style={{ color: "#1E9BF0" }}>{t.title}</p>
               </div>
             </div>

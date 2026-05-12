@@ -41,7 +41,7 @@ export default function CountryStatsBanner() {
     <section
       ref={sectionRef}
       className="py-10 px-6"
-      style={{ backgroundColor: '#EFF8FF', borderTop: '4px solid #1E9BF0' }}
+      style={{ backgroundColor: '#0D0C24', borderTop: '4px solid #1E9BF0' }}
     >
       <div ref={triggerRef} className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -54,14 +54,14 @@ export default function CountryStatsBanner() {
             <div className="flex items-baseline gap-2 mb-1">
               <span
                 className="font-extrabold leading-none"
-                style={{ fontSize: 'clamp(3.5rem, 10vw, 6.5rem)', color: '#2D2B6B' }}
+                style={{ fontSize: 'clamp(3.5rem, 10vw, 6.5rem)', color: '#ffffff' }}
               >
                 {investmentsCount}
               </span>
             </div>
             <h2
               className="font-bold leading-tight tracking-tight"
-              style={{ fontSize: 'clamp(1.4rem, 3.5vw, 2.4rem)', color: '#2D2B6B' }}
+              style={{ fontSize: 'clamp(1.4rem, 3.5vw, 2.4rem)', color: '#ffffff' }}
             >
               GLOB<span style={{ color: '#1E9BF0' }}>A</span>L
               <br />
@@ -71,13 +71,13 @@ export default function CountryStatsBanner() {
 
           {/* Right — description */}
           <div className="reveal-up stagger-2">
-            <h3 className="text-lg md:text-xl font-bold mb-3" style={{ color: '#2D2B6B' }}>
+            <h3 className="text-lg md:text-xl font-bold mb-3" style={{ color: '#ffffff' }}>
               We are ready when you are.
             </h3>
-            <p className="text-sm leading-relaxed mb-3" style={{ color: 'rgba(45,43,107,0.65)' }}>
+            <p className="text-sm leading-relaxed mb-3" style={{ color: 'rgba(255,255,255,0.60)' }}>
               When it comes to an individual&apos;s global financial situation, our experienced professionals work hard. Our committed team of professionals providing superior financial solutions for clients living in the global economy, ultimately striving for personal financial freedom that guides our clients to prosperity.
             </p>
-            <p className="text-sm leading-relaxed" style={{ color: 'rgba(45,43,107,0.65)' }}>
+            <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.60)' }}>
               We believe that every investor deserves access to world-class investment products and strategies, regardless of where they are located. Our platform connects African investors to global markets with ease and transparency.
             </p>
           </div>

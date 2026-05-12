@@ -10,7 +10,7 @@ export default function CountryAfricaSection() {
   const sectionRef = useScrollReveal<HTMLElement>();
 
   return (
-    <section className="py-10 px-6" style={{ backgroundColor: '#EFF8FF' }} ref={sectionRef}>
+    <section className="py-10 px-6" style={{ backgroundColor: '#0D0C24' }} ref={sectionRef}>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
@@ -18,14 +18,14 @@ export default function CountryAfricaSection() {
           <div className="reveal-left">
             <h2
               className="font-bold text-2xl md:text-3xl leading-tight tracking-tight mb-4"
-              style={{ color: '#2D2B6B' }}
+              style={{ color: '#ffffff' }}
             >
               Putting global markets within reach of African Investors
             </h2>
-            <p className="text-sm leading-relaxed mb-3" style={{ color: 'rgba(45,43,107,0.65)' }}>
+            <p className="text-sm leading-relaxed mb-3" style={{ color: 'rgba(255,255,255,0.60)' }}>
               Not everyone has equal access and opportunity to the best concepts. We strive to close the gap. Our team is committed to making global investment work and this means bringing to people who come to profit despite being young.
             </p>
-            <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(45,43,107,0.65)' }}>
+            <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.60)' }}>
               Through our platform, African investors can access ETFs, equities, bonds, and alternative assets from global markets — all managed by experienced professionals who understand both local and international financial landscapes.
             </p>
             <a

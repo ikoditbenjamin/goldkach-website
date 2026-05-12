@@ -28,7 +28,7 @@ export default function MissionBanner() {
     <section
       ref={ref}
       className="py-14 px-6"
-      style={{ backgroundColor: '#ffffff' }}
+      style={{ backgroundColor: '#0D0C24' }}
     >
       <div className="max-w-3xl mx-auto reveal-up">
 
@@ -41,7 +41,7 @@ export default function MissionBanner() {
                 key={tab.id}
                 onClick={() => setActive(tab.id)}
                 className="relative pb-4 text-xl font-bold text-left transition-colors duration-200 focus:outline-none"
-                style={{ color: isActive ? '#1E9BF0' : '#2D2B6B' }}
+                style={{ color: isActive ? '#1E9BF0' : 'rgba(255,255,255,0.70)' }}
               >
                 {tab.label}
 
@@ -50,7 +50,7 @@ export default function MissionBanner() {
                   className="absolute bottom-0 left-0 h-[3px] transition-all duration-400"
                   style={{
                     width: isActive ? '100%' : '0%',
-                    backgroundColor: '#2D2B6B',
+                    backgroundColor: '#1E9BF0',
                     transitionDuration: '350ms',
                   }}
                 />
@@ -60,7 +60,7 @@ export default function MissionBanner() {
         </div>
 
         {/* Thin full-width divider under tabs */}
-        <div className="w-full h-[1px] mb-0" style={{ backgroundColor: 'rgba(45,43,107,0.15)' }} />
+        <div className="w-full h-[1px] mb-0" style={{ backgroundColor: 'rgba(30,155,240,0.25)' }} />
 
         {/* ── Content card — sky blue, text fades on tab switch ── */}
         <div

@@ -60,7 +60,7 @@ export default function CountryInvestingSteps() {
   return (
     <section
       className="py-10 px-6"
-      style={{ backgroundColor: '#EFF8FF' }}
+      style={{ backgroundColor: '#141336' }}
       ref={sectionRef}
     >
       <div className="max-w-7xl mx-auto">
@@ -69,11 +69,11 @@ export default function CountryInvestingSteps() {
         <div className="mb-8 reveal-up">
           <h2
             className="font-bold text-2xl md:text-3xl leading-tight tracking-tight"
-            style={{ color: '#2D2B6B' }}
+            style={{ color: '#ffffff' }}
           >
             Investing just makes sense
           </h2>
-          <p className="text-sm mt-2 max-w-xl" style={{ color: 'rgba(45,43,107,0.60)' }}>
+          <p className="text-sm mt-2 max-w-xl" style={{ color: 'rgba(255,255,255,0.55)' }}>
             Whether you are a new or experienced investor, we are dedicated to improving the route of your financial goals.
           </p>
         </div>

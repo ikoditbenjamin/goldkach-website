@@ -48,7 +48,7 @@ export default function CountryInsightsFeature() {
   }, []);
 
   return (
-    <section className="py-10 px-6" style={{ backgroundColor: '#EFF8FF' }} ref={sectionRef}>
+    <section className="py-10 px-6" style={{ backgroundColor: '#141336' }} ref={sectionRef}>
       <div className="max-w-7xl mx-auto">
 
         {/* Section label */}
@@ -96,17 +96,17 @@ export default function CountryInsightsFeature() {
                 </span>
                 <h3
                   className="font-bold text-xl md:text-2xl leading-tight tracking-tight mb-3"
-                  style={{ color: '#2D2B6B' }}
+                  style={{ color: '#ffffff' }}
                 >
                   {article.title}
                 </h3>
-                <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(45,43,107,0.65)' }}>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.60)' }}>
                   {article.excerpt}
                 </p>
                 <div className="flex items-center gap-3 mb-5">
-                  <span className="text-xs" style={{ color: 'rgba(45,43,107,0.50)' }}>{article.date}</span>
-                  <span className="w-1 h-1 rounded-full" style={{ backgroundColor: 'rgba(45,43,107,0.25)' }} />
-                  <span className="text-xs" style={{ color: 'rgba(45,43,107,0.50)' }}>{article.readTime}</span>
+                  <span className="text-xs" style={{ color: 'rgba(255,255,255,0.45)' }}>{article.date}</span>
+                  <span className="w-1 h-1 rounded-full" style={{ backgroundColor: 'rgba(255,255,255,0.20)' }} />
+                  <span className="text-xs" style={{ color: 'rgba(255,255,255,0.45)' }}>{article.readTime}</span>
                 </div>
                 <Link
                   href={article.slug}

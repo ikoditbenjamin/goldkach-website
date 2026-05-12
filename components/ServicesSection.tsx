@@ -64,20 +64,20 @@ export default function ServicesSection() {
   }, []);
 
   return (
-    <section id="services" className="py-20 px-6" style={{ backgroundColor: "#F0F5FF" }} ref={sectionRef}>
+    <section id="services" className="py-20 px-6" style={{ backgroundColor: "#141336" }} ref={sectionRef}>
       <div className="max-w-7xl mx-auto">
 
         {/* ── Section Header ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-14 items-end">
           <div className="lg:col-span-5">
             <span className="section-label reveal-fade">What We Offer</span>
-            <h2 className="font-bold text-4xl md:text-5xl leading-tight tracking-tight reveal-up stagger-1" style={{ color: "#2D2B6B" }}>
+            <h2 className="font-bold text-4xl md:text-5xl leading-tight tracking-tight reveal-up stagger-1" style={{ color: "#ffffff" }}>
               Our Solutions<br />
               <span className="text-gradient-sky">Are Best</span>
             </h2>
           </div>
           <div className="lg:col-span-7 flex flex-col gap-4">
-            <p className="text-base leading-relaxed max-w-xl reveal-up stagger-2" style={{ color: "rgba(45,43,107,0.60)" }}>
+            <p className="text-base leading-relaxed max-w-xl reveal-up stagger-2" style={{ color: "rgba(255,255,255,0.55)" }}>
               We will help you to create an investment strategy and diversify that portfolio.
               Diversification has the statistical effect of reducing overall risk.
             </p>
