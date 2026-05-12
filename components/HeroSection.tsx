@@ -53,11 +53,16 @@ export default function HeroSection() {
       className="relative w-full min-h-screen flex items-end justify-start overflow-hidden bg-primary"
       aria-label="GoldKach Limited hero"
     >
-      {/* Carousel Background Images — oversized so parallax shift doesn't reveal edges */}
+      {/*
+        ── BACKGROUND IMAGES ──────────────────────────────────────────────────
+        Reduced parallax buffer: top/bottom was ±15%, now ±6%.
+        This keeps the image closer to the viewport edges so less of the
+        oversized canvas is wasted — images appear larger and better-framed.
+      */}
       <div
         ref={bgRef}
         className="absolute inset-x-0 z-0 will-change-transform"
-        style={{ top: '-15%', bottom: '-15%' }}
+        style={{ top: '-3%', bottom: '-3%' }}
       >
         {carouselSlides.map((slide, i) => (
           <div
@@ -71,7 +76,7 @@ export default function HeroSection() {
               fill
               priority={i <= 1}
               loading={i <= 1 ? 'eager' : 'lazy'}
-              className="object-cover object-center"
+              className="object-cover object-top"
               sizes="100vw"
               quality={85}
             />
@@ -105,8 +110,9 @@ export default function HeroSection() {
               <Icon name="ShieldCheckIcon" size={20} variant="solid" className="text-accent" />
             </div>
             <div>
-              <p className="text-white text-xs font-700 leading-tight">REGISTERED&amp;MANAGED</p>
-              <p className="text-white/50 text-xs font-400">Capital Market Authority (CMA)</p>
+              {/* Dark-blue label + sky-blue sub-text */}
+              <p className="text-white text-xs font-800 leading-tight">REGISTERED&amp;MANAGED</p>
+              <p className="text-sky-300/80 text-xs font-600">Capital Market Authority (CMA)</p>
             </div>
           </div>
 
@@ -114,42 +120,55 @@ export default function HeroSection() {
             className="absolute top-56 right-16 glass-card rounded-lg px-5 py-4 animate-float-slow"
             style={{ animationDelay: '1.5s' }}
           >
-            <p className="text-white/50 text-xs font-500 uppercase tracking-wider mb-1">
+            {/* Sky-blue category label */}
+            <p className="text-sky-400/80 text-xs font-700 uppercase tracking-wider mb-1">
               Portfolio Assets Management
             </p>
             <p className="text-white text-2xl font-800 leading-none">100+</p>
             <div className="flex items-center gap-1 mt-1">
               <Icon name="ArrowTrendingUpIcon" size={14} variant="solid" className="text-green-400" />
-              <span className="text-green-400 text-xs font-600">16% Annual Return</span>
+              <span className="text-green-400 text-xs font-700">16% Annual Return</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Hero Content */}
+      {/* ── HERO CONTENT ──────────────────────────────────────────────────── */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-16 pt-36">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-white/20 rounded-sm mb-6 backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
-            <span className="text-xs font-600 uppercase tracking-widest text-white/80">
+
+          {/* Eye-brow badge — sky-blue dot + white/sky label */}
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-sky-400/30 rounded-sm mb-6 backdrop-blur-sm bg-sky-950/20">
+            <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+            <span className="text-xs font-900 uppercase tracking-widest text-sky-300/90">
               Global Financial Services
             </span>
           </div>
 
+          {/*
+            Headline colour logic:
+              Line 1 "UNLOCKING"  → pure white   (authority / clarity)
+              Line 2 "GLOBAL"     → sky-blue gradient (energy / global reach)
+              Line 3 "INVESTMENTS"→ dark-navy/indigo tint via text-blue-200
+                                    so it reads as light navy against the
+                                    dark image background
+          */}
           <h1
-            className="font-display font-800 text-white leading-[0.88] tracking-tighter mb-6"
+            className="font-display font-800 leading-[0.88] tracking-tighter mb-6"
             style={{ fontSize: 'clamp(3rem, 8vw, 6.5rem)' }}
           >
-            UNLOCKING
+            <span className="text-white">UNLOCKING</span>
             <br />
             <span className="text-gradient-sky">GLOBAL</span>
             <br />
-            INVESTMENTS
+            <span className="text-blue-200/90">INVESTMENTS</span>
           </h1>
 
-          <p className="text-base md:text-lg text-white/65 font-400 leading-relaxed mb-10 max-w-xl">
-            Personalized financial strategies for individuals and corporations — building wealth,
-            securing futures, and expanding horizons across global markets.
+          {/* Body copy — soft white for readability, sky-blue on key phrase */}
+          <p className="text-base md:text-lg text-white/80 font-600 leading-relaxed mb-10 max-w-xl">
+            Personalized financial strategies for{' '}
+            <span className="text-sky-300 font-700">individuals and corporations</span>{' '}
+            — building wealth, securing futures, and expanding horizons across global markets.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -162,15 +181,16 @@ export default function HeroSection() {
             </a>
           </div>
 
+          {/* Trusted-by strip — label in sky-blue, names in muted white */}
           <div className="mt-14 pt-8 border-t border-white/10">
-            <p className="text-xs font-600 uppercase tracking-widest text-white/30 mb-5">
+            <p className="text-xs font-600 uppercase tracking-widest text-sky-400/50 mb-5">
               Trusted by leading institutions
             </p>
             <div className="flex flex-wrap items-center gap-8">
-              {['BlackRock', 'Vanguard', 'Fidelity', 'J.P. Morgan'].map((name) => (
+              {['Y-Save Ug', 'Fireplace Ug', 'Shack Investment', 'Perles Medical'].map((name) => (
                 <span
                   key={name}
-                  className="text-sm font-700 uppercase tracking-wider text-white/25 hover:text-white/50 transition-colors cursor-default"
+                  className="text-sm font-700 uppercase tracking-wider text-blue-200/30 hover:text-sky-300/70 transition-colors cursor-default"
                 >
                   {name}
                 </span>
@@ -182,7 +202,7 @@ export default function HeroSection() {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
-        <span className="text-[9px] uppercase tracking-[0.4em] text-white/30 font-600">Scroll</span>
+        <span className="text-[9px] uppercase tracking-[0.4em] text-sky-300/40 font-600">Scroll</span>
         <div className="w-px h-10 bg-white/10 relative overflow-hidden">
           <div ref={scrollBarRef} className="absolute top-0 left-0 w-full h-1/2 bg-accent animate-scroll-bar" />
         </div>

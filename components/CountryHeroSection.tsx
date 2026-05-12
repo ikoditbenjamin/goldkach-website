@@ -41,7 +41,7 @@ export default function CountryHeroSection() {
       <div
         ref={bgRef}
         className="absolute inset-x-0 z-0 will-change-transform"
-        style={{ top: '-15%', bottom: '-15%' }}
+        style={{ top: '-3%', bottom: '-3%' }}
       >
         {carouselSlides.map((slide, i) => (
           <div
@@ -55,7 +55,7 @@ export default function CountryHeroSection() {
               fill
               priority={i === 0}
               loading={i === 0 ? 'eager' : 'lazy'}
-              className="object-cover object-center"
+              className="object-cover object-top"
               sizes="100vw"
               quality={85}
             />
