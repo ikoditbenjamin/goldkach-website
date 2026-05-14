@@ -35,7 +35,7 @@ export default function CountryStatsBanner() {
     return () => obs.disconnect();
   }, []);
 
-  const investmentsCount = useCountUp(26, active);
+  const investmentsCount = useCountUp(110, active);
 
   return (
     <section

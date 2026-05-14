@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "@/components/providers";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CountrySelectModal from "@/components/CountrySelectModal";
 
 const poppins = Poppins({ 
   subsets: ["latin"], 
@@ -13,7 +14,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.goldkach.co.ug"),
+  metadataBase: new URL("https://www.goldkach.com"),
   title: {
     default: "GoldKach Limited — Global Investment Management",
     template: "%s | GoldKach Limited",
@@ -30,12 +31,12 @@ export const metadata: Metadata = {
     "financial advisory Uganda",
     "frontier markets investment",
   ],
-  authors: [{ name: "GoldKach Limited", url: "https://www.goldkach.co.ug" }],
+  authors: [{ name: "GoldKach Limited", url: "https://www.goldkach.com" }],
   creator: "GoldKach Limited",
   openGraph: {
     type: "website",
     locale: "en_UG",
-    url: "https://www.goldkach.co.ug",
+    url: "https://www.goldkach.com",
     siteName: "GoldKach Limited",
     title: "GoldKach Limited — Global Investment Management",
     description:
@@ -75,6 +76,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${poppins.variable} ${poppins.className}`}>
         <Providers>
+          <CountrySelectModal />
           <Header />
           {children}
           <Footer />
