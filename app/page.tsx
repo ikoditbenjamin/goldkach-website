@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import React from "react";
 import HeroSection from "@/components/HeroSection";
 import MissionBanner from "@/components/MissionBanner";
-import StatsSection from "@/components/StatsSection";
+// import StatsSection from "@/components/StatsSection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import TeamSection from "@/components/TeamSection";
@@ -37,7 +37,7 @@ export default function HomePage() {
 
       <HeroSection />
       <MissionBanner />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <AboutSection />
       <ServicesSection />
       <TeamSection />

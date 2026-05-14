@@ -257,27 +257,32 @@ export default function ProductsPage() {
               factSheet="/fact-sheets/goldkach-prime-growth-fund.pdf"
               description="The GoldKach Prime Growth Fund is designed for investors seeking dynamic capital appreciation by leveraging growth opportunities within the global technology sector. With strategic allocations focusing on high-growth industries, the Fund seeks to maximize returns by investing primarily in well-established ETFs like the iShares Semiconductor ETF and the Invesco QQQ ETF. By maintaining a balanced yet growth-oriented portfolio—60% in semiconductors-focused assets and 40% in a diversified selection of Nasdaq 100 companies—the Fund aims to capture the robust performance and potential of the technology sector." />
 
-            <FundCard
-              title="GoldKach Balanced Edge Fund"
-              ticker="GKBEF"
-              fundType="Balanced Equity Fund"
-              inception="30/09/2024"
-              fee="2%"
-              currency="USD"
-              allocation={[{ label: 'Invesco QQQ ETF', pct: '40%' }, { label: 'SPDR S&P 500 ETF', pct: '40%' }, { label: 'Schwab U.S. Dividend Equity ETF', pct: '20%' }]}
-              factSheet="/fact-sheets/goldkach-balanced-edge-fund.pdf"
-              description="The GoldKach Balanced Edge Fund is crafted for investors seeking a blend of growth and stability, offering a balanced approach to capital appreciation and income generation. The Fund employs a diversified strategy that combines exposure to equities and dividend paying ETFs, aiming to deliver consistent returns while managing risk effectively. Suitable for investors with a moderate risk tolerance seeking long-term capital preservation and growth." />
+            {/* ── COMING SOON — uncomment when ready to launch ── */}
+            {false && (
+              <FundCard
+                title="GoldKach Balanced Edge Fund"
+                ticker="GKBEF"
+                fundType="Balanced Equity Fund"
+                inception="30/09/2024"
+                fee="2%"
+                currency="USD"
+                allocation={[{ label: 'Invesco QQQ ETF', pct: '40%' }, { label: 'SPDR S&P 500 ETF', pct: '40%' }, { label: 'Schwab U.S. Dividend Equity ETF', pct: '20%' }]}
+                factSheet="/fact-sheets/goldkach-balanced-edge-fund.pdf"
+                description="The GoldKach Balanced Edge Fund is crafted for investors seeking a blend of growth and stability, offering a balanced approach to capital appreciation and income generation. The Fund employs a diversified strategy that combines exposure to equities and dividend paying ETFs, aiming to deliver consistent returns while managing risk effectively. Suitable for investors with a moderate risk tolerance seeking long-term capital preservation and growth." />
+            )}
 
-            <FundCard
-              title="GoldKach Income Builder Fund"
-              ticker="GKIBF"
-              fundType="Income-Focused Balanced Fund"
-              inception="30/09/2024"
-              fee="2%"
-              currency="USD"
-              allocation={[{ label: 'Invesco Senior Loan ETF (BKLN)', pct: '33.3%' }, { label: 'Schwab U.S. Dividend Equity ETF (SCHD)', pct: '33.4%' }, { label: 'iShares iBoxx $ High Yield Corporate Bond ETF (HYG)', pct: '33.3%' }]}
-              factSheet="/fact-sheets/goldkach-income-builder-fund.pdf"
-              description="The GoldKach Income Builder Fund seeks to provide a stable and sustainable income stream with modest capital appreciation by investing in a diversified portfolio of U.S. dividend-paying equities, senior secured loans, and high-yield corporate bonds. The fund targets assets that offer above-average income potential, balancing credit risk with robust income generation." />
+            {false && (
+              <FundCard
+                title="GoldKach Income Builder Fund"
+                ticker="GKIBF"
+                fundType="Income-Focused Balanced Fund"
+                inception="30/09/2024"
+                fee="2%"
+                currency="USD"
+                allocation={[{ label: 'Invesco Senior Loan ETF (BKLN)', pct: '33.3%' }, { label: 'Schwab U.S. Dividend Equity ETF (SCHD)', pct: '33.4%' }, { label: 'iShares iBoxx $ High Yield Corporate Bond ETF (HYG)', pct: '33.3%' }]}
+                factSheet="/fact-sheets/goldkach-income-builder-fund.pdf"
+                description="The GoldKach Income Builder Fund seeks to provide a stable and sustainable income stream with modest capital appreciation by investing in a diversified portfolio of U.S. dividend-paying equities, senior secured loans, and high-yield corporate bonds. The fund targets assets that offer above-average income potential, balancing credit risk with robust income generation." />
+            )}
           </div>
         </div>
       </section>
