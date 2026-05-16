@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const countries = [
   { name: 'Uganda',         flag: '/flags/uganda.png', href: '/homeug' },
@@ -11,23 +12,23 @@ const countries = [
 
 export default function CountrySelectModal() {
   const [visible, setVisible] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    // Show on every new session (clears when browser tab/window is closed)
-    const seen = sessionStorage.getItem('gk_country_seen');
-    if (!seen) {
+    // Show every time the user lands on the home page
+    if (pathname === '/') {
       setVisible(true);
+    } else {
+      setVisible(false);
     }
-  }, []);
+  }, [pathname]);
 
   const handleSelect = (href: string) => {
-    sessionStorage.setItem('gk_country_seen', '1');
     setVisible(false);
     window.location.href = href;
   };
 
   const handleSkip = () => {
-    sessionStorage.setItem('gk_country_seen', '1');
     setVisible(false);
   };
 
