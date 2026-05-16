@@ -338,7 +338,7 @@ export default function InsightsPage() {
       <section className="relative py-20 px-6 overflow-hidden">
         {/* Background image */}
         <img
-          src="https://img.rocket.new/generatedImages/rocket_gen_img_11ad01153-1767916622593.png"
+          src="/insights/bg.png"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"

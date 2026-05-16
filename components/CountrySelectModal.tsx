@@ -2,7 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+
+const STORAGE_KEY = 'goldkach_country_modal_seen';
 
 const countries = [
   { name: 'Uganda',         flag: '/flags/uganda.png', href: '/homeug' },
@@ -12,24 +13,27 @@ const countries = [
 
 export default function CountrySelectModal() {
   const [visible, setVisible] = useState(false);
-  const pathname = usePathname();
 
   useEffect(() => {
-    // Show every time the user lands on the home page
-    if (pathname === '/') {
+    // Only show if the user has never seen it before in this browser
+    const alreadySeen = localStorage.getItem(STORAGE_KEY);
+    if (!alreadySeen) {
       setVisible(true);
-    } else {
-      setVisible(false);
     }
-  }, [pathname]);
+  }, []);
+
+  const dismiss = () => {
+    localStorage.setItem(STORAGE_KEY, '1');
+    setVisible(false);
+  };
 
   const handleSelect = (href: string) => {
-    setVisible(false);
+    dismiss();
     window.location.href = href;
   };
 
   const handleSkip = () => {
-    setVisible(false);
+    dismiss();
   };
 
   if (!visible) return null;
@@ -99,12 +103,6 @@ export default function CountrySelectModal() {
               height={800}
               className="object-contain mb-4"
             />
-            {/* <p className="text-3xl font-bold leading-tight text-center" style={{ color: '#2D2B6B' }}>
-              GoldKach
-            </p>
-            <p className="text-sm font-semibold mt-1 text-center" style={{ color: '#1E9BF0' }}>
-              Unlocking Global Investments
-            </p> */}
           </div>
 
         </div>
