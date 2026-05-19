@@ -351,7 +351,7 @@ export default function InsightsPage() {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white" style={{ fontFamily: "'Book Antiqua', 'Palatino Linotype', serif" }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Ready to start your investment journey with GoldKach?
             </h2>
             <p className="text-white/70 mb-8 text-base leading-relaxed">
@@ -431,7 +431,7 @@ function ArticleCard({
       <div className="p-4 flex flex-col flex-1">
         <h3
           className="font-bold text-base mb-2 leading-snug"
-          style={{ color: '#ffffff', fontFamily: "'Book Antiqua', 'Palatino Linotype', serif" }}
+          style={{ color: '#ffffff' }}
         >
           {article.title}
         </h3>
@@ -506,7 +506,7 @@ function ArticleModal({ article, onClose }: { article: Article; onClose: () => v
         <div className="absolute bottom-0 left-0 right-0 px-6 pb-6 md:px-12 md:pb-8">
           <h2
             className="text-2xl md:text-4xl font-bold leading-tight"
-            style={{ color: '#ffffff', fontFamily: "'Book Antiqua', 'Palatino Linotype', serif" }}
+            style={{ color: '#ffffff' }}
           >
             {article.title}
           </h2>

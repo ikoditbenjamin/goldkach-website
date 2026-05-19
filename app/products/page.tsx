@@ -169,7 +169,7 @@ export default function ProductsPage() {
       <section className="py-16 px-6" style={{ backgroundColor: '#0D0C24' }}>
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#ffffff', fontFamily: "'Book Antiqua', 'Palatino Linotype', serif" }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#ffffff' }}>
               Innovative investment solutions to drive long-term capital appreciation
             </h2>
             <p className="text-white/60 leading-relaxed text-sm">
@@ -195,7 +195,7 @@ export default function ProductsPage() {
         style={{ background: 'linear-gradient(135deg, #1a1a4e 0%, #2D2B6B 100%)' }}>
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: "'Book Antiqua', 'Palatino Linotype', serif" }}>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             How can we help you?
           </h2>
           <p className="text-white/80 text-base max-w-2xl">
@@ -207,7 +207,7 @@ export default function ProductsPage() {
       {/* 1. Managed Accounts */}
       <section className="py-16 px-6" style={{ backgroundColor: '#141336' }}>
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-2xl font-bold mb-8" style={{ color: '#ffffff', fontFamily: "'Book Antiqua', 'Palatino Linotype', serif" }}>
+          <h3 className="text-2xl font-bold mb-8" style={{ color: '#ffffff' }}>
             1. Managed Accounts
           </h3>
           <div className="rounded-xl p-8 border" style={{ backgroundColor: '#1A1840', borderColor: 'rgba(30,155,240,0.20)', boxShadow: '0 4px 24px rgba(0,0,0,0.30)' }}>
@@ -242,7 +242,7 @@ export default function ProductsPage() {
         }}>
         
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-2xl font-bold text-white mb-8" style={{ fontFamily: "'Book Antiqua', 'Palatino Linotype', serif" }}>
+          <h3 className="text-2xl font-bold text-white mb-8">
             2. Funds
           </h3>
           <div className="space-y-6">
@@ -290,7 +290,7 @@ export default function ProductsPage() {
       {/* 3. Exchange Traded Funds */}
       <section className="py-16 px-6" style={{ backgroundColor: '#0D0C24' }}>
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-2xl font-bold mb-6" style={{ color: '#ffffff', fontFamily: "'Book Antiqua', 'Palatino Linotype', serif" }}>
+          <h3 className="text-2xl font-bold mb-6" style={{ color: '#ffffff' }}>
             3. Exchange Traded Funds (ETF&apos;s)
           </h3>
           <p className="text-white/60 text-sm leading-relaxed mb-4">
@@ -311,7 +311,7 @@ export default function ProductsPage() {
       {/* Who Can Invest */}
       <section className="py-16 px-6" style={{ backgroundColor: '#141336' }}>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#ffffff', fontFamily: "'Book Antiqua', 'Palatino Linotype', serif" }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#ffffff' }}>
             Who can invest?
           </h2>
           <p className="text-base font-semibold text-white/70 mb-12 max-w-3xl">
@@ -529,7 +529,7 @@ function InvestorType({
     <div className="flex items-start gap-5">
       <div className="flex-shrink-0">{icon}</div>
       <div>
-        <h4 className="text-xl font-bold mb-3" style={{ color: '#ffffff', fontFamily: "'Book Antiqua', 'Palatino Linotype', serif" }}>
+        <h4 className="text-xl font-bold mb-3" style={{ color: '#ffffff' }}>
           {title}
         </h4>
         <p className="text-white/60 text-sm leading-relaxed mb-3">{description}</p>

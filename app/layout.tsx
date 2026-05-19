@@ -5,6 +5,7 @@ import { Providers } from "@/components/providers";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CountrySelectModal from "@/components/CountrySelectModal";
+import ChatBot from "@/components/chatbot/ChatBot";
 
 const poppins = Poppins({ 
   subsets: ["latin"], 
@@ -80,6 +81,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+          <ChatBot />
         </Providers>
       </body>
     </html>

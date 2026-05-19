@@ -8,6 +8,7 @@ import ServicesSection from "@/components/ServicesSection";
 import TeamSection from "@/components/TeamSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BlogSection from "@/components/BlogSection";
+import InvestmentProjectionSimulator from "@/components/InvestmentProjectionSimulator";
 
 export const metadata: Metadata = {
   title: "GoldKach Limited — Unlocking Global Investments",
@@ -40,6 +41,7 @@ export default function HomePage() {
       {/* <StatsSection /> */}
       <AboutSection />
       <ServicesSection />
+      <InvestmentProjectionSimulator />
       <TeamSection />
       <TestimonialsSection />
       <BlogSection />
